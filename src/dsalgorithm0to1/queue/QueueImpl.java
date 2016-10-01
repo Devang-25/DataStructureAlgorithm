@@ -80,7 +80,7 @@ public class QueueImpl<T> {
         return headIndex == SPECIAL_EMPTY_VALUE;
     }
 
-    private static class QueueOverflowException extends Exception{
+    public static class QueueOverflowException extends Exception{
 
     }
 
