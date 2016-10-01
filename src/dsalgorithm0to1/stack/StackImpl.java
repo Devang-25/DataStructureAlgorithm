@@ -1,4 +1,4 @@
-package dsalgorithm0to1;
+package dsalgorithm0to1.stack;
 
 /**
  * Created by rakeshgupta on 9/29/16.
