@@ -163,6 +163,11 @@ public class DoublyLinkedList<Item> implements Iterator<Item> {
         return null;
     }
 
+    @Override
+    public void remove() {
+
+    }
+
 
     public static void main(String args[]){
         int num =  5;//Integer.parseInt(args[0]);

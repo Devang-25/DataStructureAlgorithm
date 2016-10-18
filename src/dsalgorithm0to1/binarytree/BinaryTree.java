@@ -17,7 +17,22 @@ public class BinaryTree {
         first.setLeftChild(leftChild);
         first.setRightChild(rightChild);
 
+        Node leftChild4 = new Node(4);
+        Node rightChild15 = new Node(15);
+
+        leftChild.setLeftChild(leftChild4);
+        rightChild.setRightChild(rightChild15);
+
+        leftChild4.setLeftChild(new Node(3));
+        leftChild4.setRightChild(new Node(6));
+
+        rightChild15.setLeftChild(new Node(14));
+        rightChild15.setRightChild(new Node(18));
+
+        System.out.print(" Breadth First Search : [ ");
         breadthFirst(first);
+        System.out.print("]");
+
 
     }
 
