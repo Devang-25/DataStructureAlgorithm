@@ -37,7 +37,7 @@ public class BinarySearchTree {
 
         System.out.println();
 
-        BinaryTree.Node node1 = new BinaryTree.Node(1);
+        BinaryTree.Node node1 = new BinaryTree.Node(2);
         insertData(bSTRoot, node1);
         System.out.print("Breadth First Search : [ ");
         BinaryTree.breadthFirst(bSTRoot);
@@ -49,8 +49,8 @@ public class BinarySearchTree {
         System.out.print("Breadth First Search : [ ");
         BinaryTree.breadthFirst(bSTRoot);
         System.out.print("]");
-
         System.out.println();
+        System.out.println("*************Searching for data in BST**************");
 
         BinaryTree.Node result = lookup(bSTRoot, 10);
         if (result != null) {
@@ -64,9 +64,25 @@ public class BinarySearchTree {
             System.out.println("Not found");
         }
 
+        System.out.println();
+
+        System.out.println("*************Finding min value in Binary tree**************");
+        int minimumValue = minValue(bSTRoot);
+        if (minimumValue != -1)
+            System.out.println("Minimum value in BST is "
+                    + minimumValue);
 
     }
 
+    public static int minValue(BinaryTree.Node root){
+        if (root == null)
+            return -1;
+
+        if (root.getLeftChild() == null)
+            return ((int) root.getData());
+
+        return minValue(root.getLeftChild());
+    }
 
 
     public static BinaryTree.Node lookup(BinaryTree.Node head, int data){
