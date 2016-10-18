@@ -84,7 +84,7 @@ public class QueueImpl<T> {
 
     }
 
-    private static class QueueUnderflowException extends Exception{
+    public static class QueueUnderflowException extends Exception{
 
     }
 
