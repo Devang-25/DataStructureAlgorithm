@@ -39,6 +39,18 @@ public class BinaryTree {
         preOrder(first);
         System.out.print("]");
 
+        System.out.println();
+
+        System.out.print(" Depth First Search(INORDER) : [ ");
+        inOrder(first);
+        System.out.print("]");
+
+        System.out.println();
+
+        System.out.print(" Depth First Search(POSTORDER) : [ ");
+        postOrder(first);
+        System.out.print("]");
+
 
     }
 
@@ -52,6 +64,28 @@ public class BinaryTree {
         preOrder(root.getLeftChild());
         preOrder(root.getRightChild());
 
+    }
+
+    //  Depth First Search Algorithm(Second way to traverse- INORDER)
+    public static void inOrder(Node root){
+
+        if (root == null)
+            return;
+
+        inOrder(root.getLeftChild());
+        printNode(root);
+        inOrder(root.getRightChild());
+    }
+
+    //  Depth First Search Algorithm(Third way to traverse- POSTORDER)
+    public static void postOrder(Node root){
+
+        if (root == null)
+            return;
+
+        postOrder(root.getLeftChild());
+        postOrder(root.getRightChild());
+        printNode(root);
     }
 
 
