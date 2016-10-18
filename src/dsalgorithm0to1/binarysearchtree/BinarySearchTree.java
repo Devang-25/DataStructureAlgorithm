@@ -35,7 +35,53 @@ public class BinarySearchTree {
         BinaryTree.breadthFirst(bSTRoot);
         System.out.print("]");
 
+        System.out.println();
 
+        BinaryTree.Node node1 = new BinaryTree.Node(1);
+        insertData(bSTRoot, node1);
+        System.out.print("Breadth First Search : [ ");
+        BinaryTree.breadthFirst(bSTRoot);
+        System.out.print("]");
+
+        System.out.println();
+
+        insertData(bSTRoot, new BinaryTree.Node(20));
+        System.out.print("Breadth First Search : [ ");
+        BinaryTree.breadthFirst(bSTRoot);
+        System.out.print("]");
+
+        System.out.println();
+
+        BinaryTree.Node result = lookup(bSTRoot, 10);
+        if (result != null) {
+            System.out.print("Data found at Ancestor Node of ");
+            if (result.getLeftChild() != null)
+                 System.out.print(result.getLeftChild().getData());
+            else
+                System.out.print(result.getRightChild().getData());
+
+        }else {
+            System.out.println("Not found");
+        }
+
+
+    }
+
+
+
+    public static BinaryTree.Node lookup(BinaryTree.Node head, int data){
+
+        if (head == null)
+            return null;
+
+        if (((int) head.getData()) == data)
+            return head;
+
+        if (data <= (int)head.getData()){
+            return lookup(head.getLeftChild(), data);
+        }else{
+            return lookup(head.getRightChild(), data);
+        }
     }
 
     public static BinaryTree.Node insertData(BinaryTree.Node head,
