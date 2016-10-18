@@ -33,8 +33,27 @@ public class BinaryTree {
         breadthFirst(first);
         System.out.print("]");
 
+        System.out.println();
+
+        System.out.print(" Depth First Search(PREORDER) : [ ");
+        preOrder(first);
+        System.out.print("]");
+
 
     }
+
+//  Depth First Search Algorithm(First way to traverse- PREORDER)
+    public static void preOrder(Node root){
+
+        if (root == null)
+            return;
+
+        printNode(root);
+        preOrder(root.getLeftChild());
+        preOrder(root.getRightChild());
+
+    }
+
 
     public static void breadthFirst(Node root)
             throws QueueImpl.QueueOverflowException,
