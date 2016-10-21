@@ -3,6 +3,7 @@ package dsalgorithm0to1.binarysearchtree;
 import dsalgorithm0to1.binarytree.BinaryTree;
 
 import static dsalgorithm0to1.binarytree.BinaryTree.inOrder;
+import static dsalgorithm0to1.binarytree.BinaryTree.preOrder;
 
 /**
  * Created by rakeshgupta on 10/19/16.
@@ -47,6 +48,25 @@ public class BSTProblems {
         System.out.println();
         System.out.println("***Counting number of Structurally Unique possible tree***");
         System.out.println(countTrees(3));
+        System.out.println();
+        System.out.println("***Printing node if it is within range***");
+        printRange(bSTRoot, 3, 11);
+        System.out.println();
+
+    }
+
+
+
+    private static void printRange(BinaryTree.Node root, int low, int high){
+        if (root == null)
+            return;
+        if (low <= (int)root.getData())
+            printRange(root.getLeftChild(), low, high);
+        if (low <= ((int) root.getData()) && ((int) root.getData()) <= high)
+            System.out.println(root.getData());
+
+        if (high > ((int) root.getData()))
+            printRange(root.getRightChild(), low, high);
     }
 
     private static int countTrees(int numNodes){
