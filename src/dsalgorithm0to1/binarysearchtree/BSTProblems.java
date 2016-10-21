@@ -44,6 +44,23 @@ public class BSTProblems {
         mirrorBST(bSTRoot);
         System.out.println("BST after mirroring tree: ");
         inOrder(bSTRoot);
+        System.out.println();
+        System.out.println("***Counting number of Structurally Unique possible tree***");
+        System.out.println(countTrees(3));
+    }
+
+    private static int countTrees(int numNodes){
+        if (numNodes <= 1)
+            return 1;
+
+        int sum = 0;
+        for (int i = 1; i <= numNodes; i++) {
+            int countLeftTrees = countTrees(i-1);
+            int countRightTrees = countTrees(numNodes-1);
+
+            sum = sum + (countLeftTrees * countRightTrees);
+        }
+        return sum;
     }
 
     private static void mirrorBST(BinaryTree.Node bSTRoot) {
