@@ -50,12 +50,25 @@ public class BSTProblems {
         System.out.println(countTrees(3));
         System.out.println();
         System.out.println("***Printing node if it is within range***");
-        printRange(bSTRoot, 3, 11);
+        printRange(bSTRoot, 4, 17);
         System.out.println();
+        System.out.println("***Checking a tree if it is Binary Search Tree***");
+        System.out.println(isBinarySearchTree(bSTRoot, 3, 11));
+        System.out.println();
+
 
     }
 
+    private static boolean isBinarySearchTree(BinaryTree.Node root, int min, int max ){
+        if (root == null)
+            return true;
 
+        if (((int) root.getData()) <= min || ((int) root.getData()) > max)
+            return false;
+
+        return isBinarySearchTree(root.getLeftChild(), min, ((int) root.getData()))
+                && isBinarySearchTree(root.getRightChild(), ((int) root.getData()), max);
+    }
 
     private static void printRange(BinaryTree.Node root, int low, int high){
         if (root == null)
