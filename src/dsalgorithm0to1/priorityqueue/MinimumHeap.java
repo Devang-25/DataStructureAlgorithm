@@ -77,7 +77,5 @@ public class MinimumHeap<T extends  Comparable> extends Heap<T> {
 
     }
 
-
-    private class HeapFullException extends Exception {
-    }
 }
+
