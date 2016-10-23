@@ -7,8 +7,8 @@ import java.lang.reflect.Array;
  */
 public abstract  class Heap<T extends Comparable> {
     private static int MAX_SIZE = 40;
-    private T[] array;
-    private int count = 0;
+    public T[] array;
+    public int count = 0;
 
     public Heap(Class<T> tClass){
         this(tClass, MAX_SIZE);

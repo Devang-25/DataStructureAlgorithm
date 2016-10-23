@@ -23,8 +23,61 @@ public class MinimumHeap<T extends  Comparable> extends Heap<T> {
                     .compareTo(getElementAtIndex(rightIndex))
                     < 0 ? leftIndex : rightIndex;
         } else if (leftIndex != -1){
-
+            smallerIndex = leftIndex;
+        } else if (rightIndex != -1){
+            smallerIndex = rightIndex;
         }
 
+        if (smallerIndex == -1)
+            return;
+
+        if (getElementAtIndex(smallerIndex)
+                .compareTo(getElementAtIndex(index)) < 0){
+            swap(smallerIndex, index);
+            siftDown(smallerIndex);
+        }
+
+    }
+
+    public void siftUp(int index){
+        int parentIndex = getParentIndex(index);
+
+        if (parentIndex != -1 &&
+                getElementAtIndex(index)
+                .compareTo(getElementAtIndex(parentIndex)) < 0){
+            swap(parentIndex, index);
+            siftUp(parentIndex);
+        }
+    }
+
+    public void insert(T value) throws HeapFullException{
+        if (count >= array.length){
+            throw new HeapFullException();
+        }
+
+        array[count] = value;
+        siftUp(count);
+
+        count++;
+    }
+
+    public T removeHighestPriority() throws HeapFullException{
+        T min = getHighestPriority();
+
+        array[0] = array[count-1];
+        count--;
+
+        return min;
+    }
+
+    private T getHighestPriority() throws HeapFullException {
+        if (count == 0)
+            throw new HeapFullException();
+        return array[0];
+
+    }
+
+
+    private class HeapFullException extends Exception {
     }
 }
