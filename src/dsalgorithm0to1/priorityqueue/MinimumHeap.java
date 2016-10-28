@@ -1,5 +1,7 @@
 package dsalgorithm0to1.priorityqueue;
 
+import static dsalgorithm0to1.binarytree.BinaryTree.preOrder;
+
 /**
  * Created by rakeshgupta on 10/22/16.
  */
@@ -70,12 +72,15 @@ public class MinimumHeap<T extends  Comparable> extends Heap<T> {
         return min;
     }
 
-    private T getHighestPriority() throws HeapFullException {
+    public T getHighestPriority() throws HeapFullException {
         if (count == 0)
             throw new HeapFullException();
         return array[0];
 
     }
 
+    public void printHeapArray() {
+      //  preOrder(this);
+    }
 }
 
