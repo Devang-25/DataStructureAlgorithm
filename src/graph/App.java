@@ -30,6 +30,8 @@ public class App {
         v7.addNeighbourList(new Vertex(11));
         v1.addNeighbourList(new Vertex(10));
 
-        bfs.bfs(v1);
+//        bfs.bfs(v1);
+         DepthFirstSearch dfs = new DepthFirstSearch();
+         dfs.DFSUsingStack(v1);
     }
 }
