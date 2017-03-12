@@ -28,7 +28,7 @@ public class QueueImpl<T> {
 //        System.out.println(queue.dequeue());
 //        System.out.println(queue.dequeue());
 //        System.out.println(queue.dequeue());
-//
+
        queue.printQueue(queue);
 
         System.out.println(queue.isEmpty());

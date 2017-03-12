@@ -1,4 +1,4 @@
-package geeksforgeeks.string;
+package geeksforgeeks.strings;
 
 /**
  * Created by rakeshgupta on 11/1/16.

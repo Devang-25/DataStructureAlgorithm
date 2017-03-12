@@ -1,7 +1,7 @@
-package geeksforgeeks.string;
+package geeksforgeeks.strings;
 
 /**
- * Created by rakeshgupta on 11/1/16.
+ * Created by rakeshgupta on 11/1/16. // 7022311425 Dinesh Kushwaha
  */
 public class RunLengthEncoding {
     public static void main(String[] args) {
