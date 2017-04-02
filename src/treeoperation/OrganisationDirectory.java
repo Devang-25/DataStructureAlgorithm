@@ -40,7 +40,9 @@ public class OrganisationDirectory {
 
         ceo.setList(managerList);
 
-        printCEOData(ceo);
+        //printCEOData(ceo);
+        //printManagers(managerList);
+        printEmployees(employeeList);
 
     }
 
