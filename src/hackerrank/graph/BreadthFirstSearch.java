@@ -1,4 +1,4 @@
-package graph;
+package hackerrank.graph;
 
 import java.util.LinkedList;
 import java.util.Queue;

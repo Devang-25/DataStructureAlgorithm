@@ -1,4 +1,4 @@
-package completedsalgo.datastructure.Arrays;
+package sample_exercise.Arrays;
 
 import java.util.stream.IntStream;
 

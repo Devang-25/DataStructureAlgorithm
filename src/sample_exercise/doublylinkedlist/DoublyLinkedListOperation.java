@@ -1,4 +1,4 @@
-package doublylinkedlist;
+package sample_exercise.doublylinkedlist;
 
 import java.util.NoSuchElementException;
 

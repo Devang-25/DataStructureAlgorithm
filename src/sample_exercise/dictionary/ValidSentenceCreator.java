@@ -1,4 +1,4 @@
-package dictionary;
+package sample_exercise.dictionary;
 
 import java.util.HashMap;
 

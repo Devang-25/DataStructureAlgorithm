@@ -1,4 +1,4 @@
-package completedsalgo.datastructure.Arrays.linkedlist;
+package sample_exercise.linkedlist;
 
 /**
  * Created by rakeshgupta on 2/15/17.

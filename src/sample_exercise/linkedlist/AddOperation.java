@@ -1,4 +1,4 @@
-package linkedlist;
+package sample_exercise.linkedlist;
 
 import java.util.Collection;
 import java.util.Iterator;

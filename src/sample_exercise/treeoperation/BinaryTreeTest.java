@@ -1,4 +1,4 @@
-package treeoperation;
+package sample_exercise.treeoperation;
 
 import org.junit.Test;
 

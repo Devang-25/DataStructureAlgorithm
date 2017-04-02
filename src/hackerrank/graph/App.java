@@ -1,4 +1,4 @@
-package graph;
+package hackerrank.graph;
 
 /**
  * Created by rakeshgupta on 11/24/16.

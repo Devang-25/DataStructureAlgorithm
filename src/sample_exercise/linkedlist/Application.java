@@ -1,4 +1,4 @@
-package linkedlist;
+package sample_exercise.linkedlist;
 
 import java.util.LinkedList;
 

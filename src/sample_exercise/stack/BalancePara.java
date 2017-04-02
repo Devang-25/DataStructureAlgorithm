@@ -1,4 +1,4 @@
-package stack;
+package sample_exercise.stack;
 
 import java.util.Scanner;
 import java.util.Stack;

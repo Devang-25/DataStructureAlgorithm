@@ -1,4 +1,4 @@
-package treeoperation;
+package sample_exercise.treeoperation;
 
 /**
  * Created by rakeshgupta on 9/24/16.

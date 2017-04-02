@@ -1,6 +1,4 @@
-package doublylinkedlist;
-
-import sun.awt.AWTIcon32_security_icon_yellow16_png;
+package sample_exercise.doublylinkedlist;
 
 import java.util.Iterator;
 import java.util.ListIterator;
