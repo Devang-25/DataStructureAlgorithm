@@ -10,7 +10,7 @@ public class CheckStructurallyIdenticalInBinaryTree {
         System.out.println("Checking if two Binary tree is structually Identical : " + checkStructurallyBinaryTree(binaryTree, binaryTree1));
     }
 
-    private static boolean checkStructurallyBinaryTree(BinaryTree root1, BinaryTree root2 ) {
+    public static boolean checkStructurallyBinaryTree(BinaryTree root1, BinaryTree root2 ) {
         if (root1 == null && root2 == null)
             return true;
         if (root1 == null || root2 == null)
