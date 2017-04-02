@@ -9,7 +9,7 @@ public class HeightOfBinaryTreeRecursion {
         System.out.println("Height of Binary Tree : " + heightOfBinaryTree(binaryTree));
     }
 
-    private static int heightOfBinaryTree(BinaryTree root) {
+    public static int heightOfBinaryTree(BinaryTree root) {
         if (root == null )
             return 0;
 

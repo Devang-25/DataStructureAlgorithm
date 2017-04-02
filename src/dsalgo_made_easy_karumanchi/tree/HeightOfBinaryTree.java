@@ -13,7 +13,7 @@ public class HeightOfBinaryTree {
         System.out.println("Height of Tree : " + heightOfBinaryTree(binaryTree));
     }
 
-    private static int heightOfBinaryTree(BinaryTree root) {
+    public static int heightOfBinaryTree(BinaryTree root) {
         if (root == null )
             return 0;
 
