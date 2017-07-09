@@ -24,6 +24,10 @@ I have covered all topic in data structure given as below.
   All above section contains important questions under that topic.
   It contains mainly programming interview questions.
 
-# Solution of DataStructure and Algorithm domain of HackerRank
-You can find solution of programs of HackerRank of DS and Algo section.
-Click here https://github.com/rakeshkumargupt/DataStructureAlgorithm/tree/master/src/hackerrank
+  ## All programming interview question are solution of different coding contest and online programming platform.
+  
+  Link to HackerRank solution : https://github.com/rakeshkumargupt/DataStructureAlgorithm/tree/master/src/hackerrank/algorithm
+  
+  ## Tips to use it easily.
+  Simply clone the repository and open this repository in any IDE and understand it through running it.
+  
