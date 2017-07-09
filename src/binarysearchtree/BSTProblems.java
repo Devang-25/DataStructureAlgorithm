@@ -1,8 +1,8 @@
 package binarysearchtree;
 
-import tree.BinaryTree;
+import tree.binarytree.BinaryTree;
 
-import static tree.BinaryTree.inOrder;
+import static tree.binarytree.BinaryTree.inOrder;
 
 /**
  * Created by rakeshgupta on 10/19/16.

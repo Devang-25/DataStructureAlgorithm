@@ -1,6 +1,6 @@
 package binarysearchtree;
 
-import tree.BinaryTree;
+import tree.binarytree.BinaryTree;
 import queue.QueueImpl;
 
 /**
