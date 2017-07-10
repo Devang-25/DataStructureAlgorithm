@@ -4,7 +4,7 @@ import queue.QueueImpl;
 /**
  * Created by rakeshgupta on 10/18/16.
  */
-public class BinaryTree extends tree.BinaryTree {
+public class BinaryTree {
 
     public static void main(String[] args)
             throws QueueImpl.QueueUnderflowException,

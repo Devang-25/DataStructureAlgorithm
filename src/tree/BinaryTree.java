@@ -36,4 +36,12 @@ public class BinaryTree {
     public void setData(int data) {
         this.data = data;
     }
+
+    public static void postOrder(BinaryTree root){
+        if (root == null)
+            return;
+        postOrder(root.getLeft());
+        postOrder(root.getRight());
+        System.out.println(root.getData() + " ");
+    }
 }
