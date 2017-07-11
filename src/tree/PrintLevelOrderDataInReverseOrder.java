@@ -29,6 +29,7 @@ public class PrintLevelOrderDataInReverseOrder {
             stack.push(tmp);
         }
         while (!stack.isEmpty())
-            System.out.print(stack.pop().getData() + " ");
+            System.out.println(stack.pop().getData() + " ");
+
     }
 }
