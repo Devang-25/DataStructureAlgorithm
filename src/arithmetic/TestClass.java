@@ -3,6 +3,7 @@ package arithmetic;
 import java.util.*;
 
 class TestClass {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
