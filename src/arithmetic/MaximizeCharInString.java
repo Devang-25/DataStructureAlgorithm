@@ -2,7 +2,7 @@ package arithmetic;
 
 import java.util.*;
 
-class TestClass {
+class MaximizeCharInString {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
