@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class RobotMovement {
     public static void main(String[] args) {
-        int gridSize = 4;
+        int gridSize = 70;
         int noOfWays = getTotalMovement(gridSize);
         System.out.println(noOfWays);
     }

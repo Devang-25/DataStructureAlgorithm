@@ -4,26 +4,32 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * Created by rakeshgupta on 7/26/17.
  */
+
 public class KnapsackPackingFromFile {
     public static void main(String[] args) throws IOException {
-        List<String> stream = Files.readAllLines(Paths.get("/home/rakeshgupta/Desktop/res.txt"));
+
+        String pathLocation = new Scanner(System.in).nextLine();
+        List<String> stream = Files.readAllLines(Paths.get(pathLocation));
+
         for (String s : stream){
+
             String[] sArr = s.split("( * )");
             int W = Integer.parseInt(sArr[0]);
             List<PackageItem> packageItemList = new ArrayList<>();
 
             for (int i=2; i<sArr.length; i++){
+
                 PackageItem packageItem = new PackageItem();
                 String[] oneNode = (sArr[i].replace('(',' ').replace(')',' ').replace('$', ' ')).split(",");
+
                 packageItem.index = Integer.parseInt(oneNode[0].substring(1));
                 packageItem.weight = Double.parseDouble(oneNode[1]);
                 packageItem.price = Integer.parseInt(oneNode[2].substring(1,oneNode[2].length()-1));
+
                packageItemList.add(packageItem);
             }
 
@@ -36,16 +42,18 @@ public class KnapsackPackingFromFile {
                         return -1;
                 }
             });
+
             System.out.println(Arrays.toString(sArr));
             StringBuilder ans = getKnapsackItems(packageItemList, W);
             if (ans.toString().length() != 0)
                 System.out.println(ans.substring(0, ans.length()-1));
             else
-                System.out.println(ans);
+                System.out.println(ans+"-");
         }
     }
 
     private static StringBuilder getKnapsackItems(List<PackageItem> packageItemList, int W) {
+
         int n = packageItemList.size();
         StringBuilder[][] items = new StringBuilder[n+1][W+1];
         double[][] K = new double[n+1][W+1];
@@ -79,6 +87,7 @@ public class KnapsackPackingFromFile {
 //        return K[n][W];
     }
 }
+
 class PackageItem {
     int index;
     double weight;
