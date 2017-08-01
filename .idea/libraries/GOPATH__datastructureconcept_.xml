@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/go/src/bitbucket.org" />
       <root url="file://$USER_HOME$/go/src/gopkg.in" />
       <root url="file://$USER_HOME$/go/src/github.com" />
+      <root url="file://$USER_HOME$/go/src/gobot.io" />
+      <root url="file://$USER_HOME$/go/src/stathat.com" />
       <root url="file://$USER_HOME$/go/src/golang.org" />
       <root url="file://$USER_HOME$/go/src/.idea" />
     </CLASSES>
@@ -16,6 +18,8 @@
       <root url="file://$USER_HOME$/go/src/bitbucket.org" />
       <root url="file://$USER_HOME$/go/src/gopkg.in" />
       <root url="file://$USER_HOME$/go/src/github.com" />
+      <root url="file://$USER_HOME$/go/src/gobot.io" />
+      <root url="file://$USER_HOME$/go/src/stathat.com" />
       <root url="file://$USER_HOME$/go/src/golang.org" />
       <root url="file://$USER_HOME$/go/src/.idea" />
     </SOURCES>

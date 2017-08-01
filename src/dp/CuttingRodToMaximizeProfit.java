@@ -30,7 +30,6 @@ public class CuttingRodToMaximizeProfit {
     static int getMaximumProfit(int rodValue[], int n){
         int val[] = new int[n+1];
         val[0] = 0;
-
         for (int i = 1; i <= n; i++) {
             int maxValue = Integer.MIN_VALUE;
             for (int j = 0; j < i; j++) {
@@ -38,7 +37,6 @@ public class CuttingRodToMaximizeProfit {
                 val[i] = maxValue;
             }
         }
-
         return val[n];
     }
 }

@@ -1,1 +1,14 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/inspectionProfiles/
+.idea/workspace.xml
+out/production/datastructureconcept/crazyforcode/
+out/production/datastructureconcept/dsalgo_made_easy_karumanchi/
+out/production/datastructureconcept/dsalgorithm0to1/
+out/production/datastructureconcept/geeksforgeeks/
+out/production/datastructureconcept/hackerrank/graph/
+out/production/datastructureconcept/sample_exercise/
+out/production
+lib
+.idea
+datastructureconcept.iml
+.gitignore

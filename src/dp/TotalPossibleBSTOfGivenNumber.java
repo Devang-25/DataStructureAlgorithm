@@ -5,7 +5,7 @@ package dp;
  */
 public class TotalPossibleBSTOfGivenNumber {
     public static void main(String[] args) {
-        int num = 3;
+        int num = 4 ;
         int totalNumberOfBSTOfGivenNumber = getTotalBST(num);
         System.out.println(totalNumberOfBSTOfGivenNumber);
     }
