@@ -9,9 +9,11 @@ public class EggDroppingProblem {
         int floors = 36;
 
         int minNumberOfTrials = getMinTrialsInWorstCaseToBreakEgg(floors, eggs);
-        System.out.println("Min no of trials in worst case with " + eggs + " eggs and " + floors + " floor is : " + minNumberOfTrials);
+        System.out.println("Min no of trials in worst case with " + eggs + " eggs and " + floors + " floor is(DP) : " + minNumberOfTrials);
+        System.out.println("Min no of trials in worst case with " + eggs + " eggs and " + floors + " floor is(Recursive) : " +calculateRecursive(eggs, floors));
     }
 
+    // Using dynamic programming
     private static int getMinTrialsInWorstCaseToBreakEgg(int floors, int eggs) {
         int eggFloor[][] = new int[eggs+1][floors+1];
         int res = 0;
@@ -37,5 +39,23 @@ public class EggDroppingProblem {
             }
         }
         return eggFloor[eggs][floors];
+    }
+
+    //Using recursive algorithm
+    public static int calculateRecursive(int eggs, int floors){
+        if(eggs == 1){
+            return floors;
+        }
+        if(floors == 0){
+            return 0;
+        }
+        int min = 1000;
+        for(int i=1; i <= floors; i++){
+            int val = 1 + Math.max(calculateRecursive(eggs-1, i-1),calculateRecursive(eggs, floors-i));
+            if(val < min){
+                min = val;
+            }
+        }
+        return min;
     }
 }
