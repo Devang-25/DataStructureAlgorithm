@@ -86,27 +86,28 @@ public class KnapsackPackingFromFile {
         return items[n][W];
 //        return K[n][W];
     }
+
+   static class PackageItem {
+        int index;
+        double weight;
+        int price;
+
+        public double getWeight() {
+            return weight;
+        }
+
+        public void setWeight(double weight) {
+            this.weight = weight;
+        }
+
+        @Override
+        public String toString() {
+            return "PackageItem{" +
+                    "index=" + index +
+                    ", weight=" + weight +
+                    ", price=" + price +
+                    '}';
+        }
 }
 
-class PackageItem {
-    int index;
-    double weight;
-    int price;
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    @Override
-    public String toString() {
-        return "PackageItem{" +
-                "index=" + index +
-                ", weight=" + weight +
-                ", price=" + price +
-                '}';
-    }
 }
