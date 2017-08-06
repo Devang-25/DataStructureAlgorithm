@@ -9,7 +9,7 @@ public class EggDroppingProblem {
         int floors = 36;
 
         int minNumberOfTrials = getMinTrialsInWorstCaseToBreakEgg(floors, eggs);
-     //   System.out.println("Min no of trials in worst case with " + eggs + " eggs and " + floors + " floor is(DP) : " + minNumberOfTrials);
+        System.out.println("Min no of trials in worst case with " + eggs + " eggs and " + floors + " floor is(DP) : " + minNumberOfTrials);
         int ans = calculateRecursive(eggs, floors);
         System.out.println("Min no of trials in worst case with " + eggs + " eggs and " + floors + " floor is(Recursive) : " + ans);
     }
