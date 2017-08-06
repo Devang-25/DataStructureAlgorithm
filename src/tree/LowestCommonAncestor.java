@@ -16,7 +16,7 @@ public class LowestCommonAncestor {
         binaryTree.setRight(new BinaryTree(3));
 
         left1.setLeft(new BinaryTree(4));
-        left1.setRight(right1);;
+        left1.setRight(right1);
 
         right1.setLeft(new BinaryTree(7));
         right1.setRight(new BinaryTree(8));
