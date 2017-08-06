@@ -28,7 +28,7 @@ public class SuperDromes {
                        hashMap.put(i, hashMap.get(i-1));
                     }
                 }else {
-                    count += hashMap.get(i).intValue();
+                    count += hashMap.get(i);
                 }
             }
 
@@ -46,10 +46,7 @@ public class SuperDromes {
                 break;
             }
         }
-        if(f==0){
-            return true;
-        }
-        return false;
+        return f == 0;
     }
 
     public static boolean chkPalindrome(int n){
@@ -59,8 +56,6 @@ public class SuperDromes {
             r=r*10+d;
             n/=10;
         }
-        if(n==m)
-            return true;
-        return false;
+        return n == m;
     }
 }
