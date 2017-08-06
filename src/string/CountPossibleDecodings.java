@@ -6,11 +6,8 @@ package string;
 public class CountPossibleDecodings {
 
     public static  boolean validDecoding(int digit0, int digit1) {
-        if ((10*digit0 + digit1) >= 10 && ((10*digit0 + digit1) < 27)) {
-            return true;
-        }
+        return (10 * digit0 + digit1) >= 10 && ((10 * digit0 + digit1) < 27);
 
-        return false;
     }
 
     public static  int countPossibleDecodings(int n, int[] digitSequence, int[] decodings) {
