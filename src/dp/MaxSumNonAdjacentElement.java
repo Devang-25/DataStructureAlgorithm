@@ -9,7 +9,11 @@ public class MaxSumNonAdjacentElement {
         int arr[] = { 2, 10, 13, 4, 2, 15, 10 };
 
         int ans = getMaxSum(arr);
-        System.out.println("Maximum Sum Non Adjacent Element : " + ans);
+        System.out.println("Maximum Sum Non Adjacent Element(DP) : " + ans);
+
+        int max = maxSum(arr, arr.length-1);
+        System.out.println("Maximum Sum Non Adjacent Element(Recursive Programming) : " + ans);
+
     }
 
     //Using Dynamic Programming
@@ -23,5 +27,14 @@ public class MaxSumNonAdjacentElement {
             exl = temp;
         }
         return inc;
+    }
+
+    public static int maxSum(int arr[], int index) {
+        if (index == 0) {
+            return arr[0];
+        } else if (index == 1) {
+            return Math.max(arr[0], arr[1]);
+        }
+        return Math.max(maxSum(arr, index - 2) + arr[index], maxSum(arr, index - 1));
     }
 }
