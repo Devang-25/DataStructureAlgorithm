@@ -29,6 +29,8 @@ public class MaxSumNonAdjacentElement {
         return inc;
     }
 
+
+    //Recursive Algorithm
     public static int maxSum(int arr[], int index) {
         if (index == 0) {
             return arr[0];
