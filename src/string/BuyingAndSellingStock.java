@@ -12,7 +12,7 @@ public class BuyingAndSellingStock {
         System.out.println("Maximum stock price from buying and selling : " + maxProfit);
     }
 
-    private static int getMaxProfitFromStock(int[] stockPrice) {
+     public static int getMaxProfitFromStock(int[] stockPrice) {
 
         int profit = 0;
         int minPrice = Integer.MAX_VALUE;
