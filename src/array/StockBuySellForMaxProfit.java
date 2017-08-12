@@ -53,8 +53,8 @@ public class StockBuySellForMaxProfit {
         int n = price.length;
        stock.stockBuySell(price, n);
     }
+    class Interval {
+        int buy, sell;
+    }
 }
 
-class Interval {
-    int buy, sell;
-}
