@@ -14,7 +14,7 @@ public class RowNumToLableInExcelSheet {
 
         str = "AAA";
         double newNum = getRowNumFromLable(str);
-        System.out.println("String : " + str + " to excel sheet row number is : " + newNum);
+        System.out.println("String : " + str + " to excel sheet row number is : " + ((int) newNum));
     }
 
     private static double getRowNumFromLable(String str) {
@@ -32,7 +32,14 @@ public class RowNumToLableInExcelSheet {
 
     private static String getLableFromRowNum(int num) {
 
+        String ans = "";
+        ans += (char)('A' + (num%26));
+        num = num/26;
+        while (num>0){
+            ans = (char)('A' + ((num-1)%26))+ans;
+            num = (num-1)/26;
+        }
 
-        return null;
+        return ans;
     }
 }
