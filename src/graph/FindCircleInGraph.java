@@ -5,4 +5,7 @@ package graph;
  * Package : graph
  */
 public class FindCircleInGraph {
+    public static void main(String[] args) {
+
+    }
 }
