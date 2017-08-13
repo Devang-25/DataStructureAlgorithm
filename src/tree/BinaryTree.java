@@ -42,6 +42,22 @@ public class BinaryTree {
             return;
         postOrder(root.getLeft());
         postOrder(root.getRight());
-        System.out.println(root.getData() + " ");
+        System.out.print(root.getData() + " ");
+    }
+
+    public static void preOrder(BinaryTree root){
+        if (root == null)
+            return;
+        System.out.print(root.getData()+" ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    public static void inOrder(BinaryTree root){
+        if (root == null)
+            return;
+        inOrder(root.left);
+        System.out.print(root.getData()+" ");
+        inOrder(root.right);
     }
 }
