@@ -12,9 +12,17 @@ public class StreamExample {
         System.out.print("Example of IntStream.of(int) method :  ");
         IntStream intStream = IntStream.of(5, 4, 6, 8);
         printIntStream(intStream);
+
         System.out.print("\nExample of IntSream.range(start,end) method :  ");
         IntStream intStream1 = IntStream.range(2,9);
         printIntStream(intStream1);
+
+
+        System.out.print("\nExample of IntSream.rangeClosed(start,end) method :  ");
+        IntStream intStream2 = IntStream.rangeClosed(2,9);
+        printIntStream(intStream2);
+
+
 
     }
 
