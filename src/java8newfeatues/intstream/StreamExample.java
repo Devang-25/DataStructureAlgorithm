@@ -22,6 +22,9 @@ public class StreamExample {
         IntStream intStream2 = IntStream.rangeClosed(2,9);
         printIntStream(intStream2);
 
+        System.out.print("\nExample of IntStream.iterate(0, i ->i+2).limit(5) method :  ");
+        IntStream intStream3 = IntStream.iterate(0, i ->i+2).limit(50000L);
+        printIntStream(intStream3);
 
 
     }
