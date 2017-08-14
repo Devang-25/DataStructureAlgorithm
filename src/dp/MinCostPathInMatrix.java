@@ -58,7 +58,7 @@ public class MinCostPathInMatrix {
     }
 
 
-    private static int getMin(int a, int b, int c) {
+    public static int getMin(int a, int b, int c) {
         return Math.min(a, Math.min(b,c));
     }
 }
