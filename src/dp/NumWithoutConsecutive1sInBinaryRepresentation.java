@@ -8,7 +8,7 @@ public class NumWithoutConsecutive1sInBinaryRepresentation {
     public static void main(String[] args) {
         int bitLength = 5;
         int num = getCount(bitLength);
-        System.out.println("Number without consecutive 1's in binary representation of number is :" + num);
+        System.out.println("Number without consecutive 1's in binary representation is :" + num);
     }
 
     private static int getCount(int n) {
