@@ -23,9 +23,8 @@ public class StreamExample {
         printIntStream(intStream2);
 
         System.out.print("\nExample of IntStream.iterate(0, i ->i+2).limit(5) method :  ");
-        IntStream intStream3 = IntStream.iterate(0, i ->i+2).limit(50000L);
+        IntStream intStream3 = IntStream.iterate(8888, i ->i+2).limit(50L);
         printIntStream(intStream3);
-
 
     }
 
