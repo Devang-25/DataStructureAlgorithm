@@ -5,4 +5,7 @@ package pattern;
  * Package : pattern
  */
 public class SearchPattern {
+    public static void main(String[] args) {
+
+    }
 }
