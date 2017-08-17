@@ -3,12 +3,18 @@ package graph;
 /**
  * Created by rakeshgupta on 11/24/16.
  */
-public class App {
+public class TestGraph {
 
     public static void main(String[] args) {
 
         BreadthFirstSearch bfs = new BreadthFirstSearch();
+        Vertex v1 = getPopulatedGraphData();
+//        bfs.bfs(v1);
+         DepthFirstSearch dfs = new DepthFirstSearch();
+         dfs.DFSUsingStack(v1);
+    }
 
+    public static Vertex getPopulatedGraphData(){
         Vertex v1 = new Vertex(1);
         Vertex v2 = new Vertex(2);
         Vertex v3 = new Vertex(3);
@@ -28,10 +34,9 @@ public class App {
 
         v7.addNeighbourList(new Vertex(12));
         v7.addNeighbourList(new Vertex(11));
+        v7.addNeighbourList(v5);
         v1.addNeighbourList(new Vertex(10));
 
-//        bfs.bfs(v1);
-         DepthFirstSearch dfs = new DepthFirstSearch();
-         dfs.DFSUsingStack(v1);
+        return v1;
     }
 }
