@@ -60,4 +60,26 @@ public class BinaryTree {
         System.out.print(root.getData()+" ");
         inOrder(root.right);
     }
+
+    public static void add(BinaryTree root, int data){
+        BinaryTree node = new BinaryTree(data);
+        if (root == null)
+            root = node;
+        else
+            traverseAndAddBinaryNode(root, node);
+    }
+
+    public static void traverseAndAddBinaryNode(BinaryTree root, BinaryTree node) {
+        if (node.getData() < root.data) {
+            if (root.getLeft() == null)
+                root.left = node;
+            else
+                traverseAndAddBinaryNode(root.left, node);
+        } else if (node.data > root.data) {
+            if (root.right == null)
+                root.right = node;
+            else
+                traverseAndAddBinaryNode(root.right, node);
+        }
+    }
 }
