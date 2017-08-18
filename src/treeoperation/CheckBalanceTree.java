@@ -9,7 +9,8 @@ import tree.BinaryTreeData;
  */
 public class CheckBalanceTree {
     public static void main(String[] args) {
-        BinaryTree root = BinaryTreeData.GetPopulatedData();
+//        BinaryTree root = BinaryTreeData.GetPopulatedData();
+        BinaryTree root = BinaryTreeData.getBSTData(2, 12);
 
         boolean status = checkBalanceTree(root);
         System.out.println("Checking if tree is balance : " + status);
