@@ -1,5 +1,7 @@
 package tree;
 
+import java.util.Random;
+
 /**
  * Created by rakeshgupta on 4/2/17.
  */
@@ -17,5 +19,18 @@ public class BinaryTreeData {
         binaryTree.setLeft(left1);
         binaryTree.setRight(right1);
         return binaryTree;
+    }
+
+    public static BinaryTree getBSTData(int rootData, int numOfData){
+        BinaryTree root = new BinaryTree(rootData);
+
+        for (int i = 1; i < numOfData; i++) {
+            BinaryTree.add(root, new Random(i).nextInt(i));
+        }
+        return root;
+    }
+
+    public static void main(String[] args) {
+        BinaryTree.preOrder(getBSTData(3, 100));
     }
 }
