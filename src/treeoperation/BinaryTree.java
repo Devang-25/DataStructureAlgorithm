@@ -15,7 +15,7 @@ public class BinaryTree {
         }
     }
 
-    private void traverseAndAddNode(Node node, Node nodeToAdd) {
+    public void traverseAndAddNode(Node node, Node nodeToAdd) {
         if(nodeToAdd.data < node.data) {
             if (node.leftChild == null){
                 node.leftChild = nodeToAdd;
