@@ -5,4 +5,7 @@ package array;
  * Package : array
  */
 public class MaxSumFromTopToBottomMatrix {
+    public static void main(String[] args) {
+
+    }
 }
