@@ -4,8 +4,8 @@ package tree;
  * Created by rakeshgupta on 7/9/17.
  */
 public class BinaryTree {
-    BinaryTree left;
-    BinaryTree right;
+    public BinaryTree left;
+    public BinaryTree right;
     int data;
 
     public BinaryTree(int data) {
