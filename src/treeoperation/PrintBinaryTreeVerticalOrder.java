@@ -17,7 +17,7 @@ public class PrintBinaryTreeVerticalOrder {
 
     private  void verticalOrderTraverse(BinaryTree root) {
             findMinMax(root, values, values, 0);
-        for (int lineNum = values.min; lineNum <values.max ; lineNum++) {
+        for (int lineNum = values.min; lineNum <=values.max ; lineNum++) {
             printVerticalLine(root, lineNum, 0);
             System.out.println();
         }
