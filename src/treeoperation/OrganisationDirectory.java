@@ -70,112 +70,114 @@ public class OrganisationDirectory {
     private static void printEmployee(Employee e) {
         System.out.println("\t Id : " + e.getId() + "\t Name : " + e.getName() + "\t Post : " + e.getPost());
     }
-	}
 
-class Employee {
-    int id;
-    String name;
-    String post;
+    static class Employee {
+        int id;
+        String name;
+        String post;
 
-    public int getId() {
-        return id;
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getPost() {
+            return post;
+        }
+
+        public void setPost(String post) {
+            this.post = post;
+        }
     }
 
-    public void setId(int id) {
-        this.id = id;
+    static class CEO {
+        int cId;
+        String cName;
+        String company;
+        List<Manager> list;
+
+        public List<Manager> getList() {
+            return list;
+        }
+
+        public void setList(List<Manager> list) {
+            this.list = list;
+        }
+
+        public int getcId() {
+            return cId;
+        }
+
+        public void setcId(int cId) {
+            this.cId = cId;
+        }
+
+        public String getcName() {
+            return cName;
+        }
+
+        public void setcName(String cName) {
+            this.cName = cName;
+        }
+
+        public String getCompany() {
+            return company;
+        }
+
+        public void setCompany(String company) {
+            this.company = company;
+        }
     }
 
-    public String getName() {
-        return name;
+    static class Manager {
+        int mId;
+        String mName;
+        String  deparName;
+        List<Employee> employeeList;
+
+        public List<Employee> getEmployeeList() {
+            return employeeList;
+        }
+
+        public void setEmployeeList(List<Employee> employeeList) {
+            this.employeeList = employeeList;
+        }
+
+        public int getmId() {
+            return mId;
+        }
+
+        public void setmId(int mId) {
+            this.mId = mId;
+        }
+
+        public String getmName() {
+            return mName;
+        }
+
+        public void setmName(String mName) {
+            this.mName = mName;
+        }
+
+        public String getDeparName() {
+            return deparName;
+        }
+
+        public void setDeparName(String deparName) {
+            this.deparName = deparName;
+        }
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPost() {
-        return post;
-    }
-
-    public void setPost(String post) {
-        this.post = post;
-    }
 }
 
-class CEO {
-    int cId;
-    String cName;
-    String company;
-    List<Manager> list;
-
-    public List<Manager> getList() {
-        return list;
-    }
-
-    public void setList(List<Manager> list) {
-        this.list = list;
-    }
-
-    public int getcId() {
-        return cId;
-    }
-
-    public void setcId(int cId) {
-        this.cId = cId;
-    }
-
-    public String getcName() {
-        return cName;
-    }
-
-    public void setcName(String cName) {
-        this.cName = cName;
-    }
-
-    public String getCompany() {
-        return company;
-    }
-
-    public void setCompany(String company) {
-        this.company = company;
-    }
-}
-
-class Manager {
-    int mId;
-    String mName;
-    String  deparName;
-    List<Employee> employeeList;
-
-    public List<Employee> getEmployeeList() {
-        return employeeList;
-    }
-
-    public void setEmployeeList(List<Employee> employeeList) {
-        this.employeeList = employeeList;
-    }
-
-    public int getmId() {
-        return mId;
-    }
-
-    public void setmId(int mId) {
-        this.mId = mId;
-    }
-
-    public String getmName() {
-        return mName;
-    }
-
-    public void setmName(String mName) {
-        this.mName = mName;
-    }
-
-    public String getDeparName() {
-        return deparName;
-    }
-
-    public void setDeparName(String deparName) {
-        this.deparName = deparName;
-    }
-}
