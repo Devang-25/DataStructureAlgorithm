@@ -21,6 +21,24 @@ public class BinaryTreeData {
         return binaryTree;
     }
 
+    public static  BinaryTree getRandomPopulatedData(){
+        BinaryTree root = new BinaryTree(4);
+        root.left = new BinaryTree(66);
+        root.right = new BinaryTree(23);
+
+        root.left.left = new BinaryTree(44);
+        root.right.right = new BinaryTree(2);
+
+        root.right.left  = new BinaryTree(9);
+        root.right.left.left = new BinaryTree(8);
+        root.right.left.right = new BinaryTree(78);
+
+        root.right.right.right = new BinaryTree(98);
+        root.right.right.right.left = new BinaryTree(76);
+
+        return root;
+    }
+
     public static BinaryTree getBSTData(int rootData, int numOfData){
         BinaryTree root = new BinaryTree(rootData);
 
