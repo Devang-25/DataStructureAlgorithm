@@ -16,6 +16,7 @@ public class CheckSubTreeInBinaryTree {
         System.out.println("Checking if tree2 is subtree of large tree1 : " + check);
     }
 
+
     private static boolean checkSubTree(BinaryTree root1, BinaryTree root2) {
         if (root2 == null)
             return true;
