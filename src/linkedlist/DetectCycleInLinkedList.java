@@ -1,11 +1,14 @@
+
 package linkedlist;
 
 import static linkedlist.LinkedList.printLinkedList;
+
 
 /**
  * Created by : Rakesh Gupta on 8/26/17
  * Package : linkedlist
  */
+
 public class DetectCycleInLinkedList {
     public static void main(String[] args) {
     LinkedList.LinkedListNode headN = getPopulatedData(8);
@@ -27,7 +30,7 @@ public class DetectCycleInLinkedList {
             slow = slow.next;
             fast = fast.next.next;
             if (slow == fast) {
-                removeNode(slow, headN);
+                removeLoop(slow, headN);
                 return;
             }
         }
@@ -48,6 +51,35 @@ public class DetectCycleInLinkedList {
                 break;
 
             ptr1 = ptr1.next;
+        }
+        ptr2.next = null;
+    }
+
+    private static void removeLoop(LinkedList.LinkedListNode loop, LinkedList.LinkedListNode head) {
+        LinkedList.LinkedListNode ptr1 = loop;
+        LinkedList.LinkedListNode ptr2 = loop;
+
+        int k = 1, i;
+        while (ptr1.next != ptr2) {
+            ptr1 = ptr1.next;
+            k++;
+        }
+
+        ptr1 = head;
+        ptr2 = head;
+
+        for (i = 0; i < k; i++) {
+            ptr2 = ptr2.next;
+        }
+
+        while (ptr2 != ptr1) {
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+        }
+
+        ptr2 = ptr2.next;
+        while (ptr2.next != ptr1) {
+            ptr2 = ptr2.next;
         }
         ptr2.next = null;
     }
