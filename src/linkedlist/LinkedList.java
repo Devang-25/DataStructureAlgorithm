@@ -35,7 +35,7 @@ public class LinkedList {
         return length;
     }
 
-    private static void printLinkedList(LinkedListNode linkedListNode) {
+    public static void printLinkedList(LinkedListNode linkedListNode) {
         while (linkedListNode != null){
             System.out.print(linkedListNode.getData()+"->");
             linkedListNode = linkedListNode.getNext();
