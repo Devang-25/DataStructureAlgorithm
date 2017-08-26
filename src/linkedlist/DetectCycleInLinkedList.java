@@ -1,5 +1,7 @@
 package linkedlist;
 
+import static linkedlist.LinkedList.printLinkedList;
+
 /**
  * Created by : Rakesh Gupta on 8/26/17
  * Package : linkedlist
@@ -8,9 +10,46 @@ public class DetectCycleInLinkedList {
     public static void main(String[] args) {
     LinkedList.LinkedListNode headN = getPopulatedData(8);
 
-    boolean status = hasCycle(headN);
+        boolean status = hasCycle(headN);
+        System.out.println("LinkedList is : ");
+        //printLinkedList(headN);
         System.out.println("LinkedList has cycle : " + status);
+        detectCycleAndRemove(headN);
+        System.out.println("After deleting node from where cycle start linkedlist is :");
+        printLinkedList(headN);
+    }
 
+    private static void detectCycleAndRemove(LinkedList.LinkedListNode headN) {
+        LinkedList.LinkedListNode slow = headN;
+        LinkedList.LinkedListNode fast = headN;
+
+        while (slow != null && fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                removeNode(slow, headN);
+                return;
+            }
+        }
+        return;
+    }
+
+    private static void removeNode(LinkedList.LinkedListNode slow, LinkedList.LinkedListNode headNode) {
+        LinkedList.LinkedListNode ptr1 = null;
+        LinkedList.LinkedListNode ptr2 = null;
+
+        ptr1 = headNode;
+        while (true){
+            ptr2 = slow;
+            while (ptr2.next != slow && ptr2.next != ptr1)
+                ptr2 = ptr2.next;
+
+            if (ptr2.next == ptr1)
+                break;
+
+            ptr1 = ptr1.next;
+        }
+        ptr2.next = null;
     }
 
     private static boolean hasCycle(LinkedList.LinkedListNode headN) {
