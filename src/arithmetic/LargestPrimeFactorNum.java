@@ -11,14 +11,14 @@ import java.io.InputStreamReader;
 public class LargestPrimeFactorNum {
     public static void main(String[] args) throws IOException {
         BufferedReader io = new BufferedReader(new InputStreamReader(System.in));
-        long num = Integer.parseInt(io.readLine());
+        long num = Long.parseLong(io.readLine());
 
         long largestPrimeNum = getLargestPrimeNumber(num);
         System.out.println("Largest Prime number of " + num + " is : " + largestPrimeNum);
     }
-
+//600851475143
     private static long getLargestPrimeNumber(long num) {
-        for (int div = 2; div < num; div++) {
+        for (long div = 2; div < num; div++) {
             if (num % div == 0) {
                 num /= div;
                 div--;
