@@ -4,7 +4,7 @@ package arithmetic;
  * Created by : Rakesh Gupta on 8/30/17
  * Package : arithmetic
  */
-public class NumDivisibleByTill20 {
+public class SmallestNumDivisibleBy1ToGivenNumber {
     public static void main(String[] args) {
         long divisibleByNumber = 30;
 
