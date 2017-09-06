@@ -1,4 +1,4 @@
-package arithmetic;
+package bitmanipulation;
 
 /**
  * Created by : Rakesh Gupta on 9/6/17
