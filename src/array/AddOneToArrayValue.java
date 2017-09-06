@@ -1,13 +1,18 @@
 package array;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by rakeshgupta on 4/3/17.
  */
 public class AddOneToArrayValue {
     public static void main(String[] args) {
-        int arr[] = {9,9,9};
-        int newArr[] = new int[arr.length+1];
-        String s = "";
+        int arr[] = {0};
+        //int newArr[] = new int[arr.length+1];
+        ArrayList<Integer> newArr = new ArrayList<>();
+
+        StringBuffer s = new StringBuffer();
 
         System.out.print("Before Adding : ");
         for (int g : arr)
@@ -15,16 +20,15 @@ public class AddOneToArrayValue {
         System.out.println();
 
         for (int a : arr){
-            s = s + a;
+             s.append(a);
         }
-        int c = Integer.parseInt(s) + 1;
+        int c = 1 + Integer.parseInt(s.toString());
         String ss = new String(c+"");
 
         char abc[] = ss.toCharArray();
-        int n = 0;
-        for (char m : abc){
-            newArr[n] = Character.getNumericValue(m);
-            n++;
+
+        for (int i = 0; i < ss.length(); i++) {
+            newArr.add(Character.getNumericValue(abc[i]));
         }
 
         System.out.print("After Adding : ");
