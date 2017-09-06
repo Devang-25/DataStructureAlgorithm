@@ -1,4 +1,4 @@
-package arithmetic;
+package bitmanipulation;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
