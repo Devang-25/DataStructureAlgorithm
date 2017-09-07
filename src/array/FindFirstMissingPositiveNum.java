@@ -8,40 +8,20 @@ import java.util.ArrayList;
  */
 public class FindFirstMissingPositiveNum {
     public static void main(String[] args) {
-        ArrayList<Integer> arrayList = new ArrayList<>();
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
         arrayList.add(3);
         arrayList.add(4);
         arrayList.add(-1);
         arrayList.add(1);
+        int[] arr = new int[arrayList.size()];
 
-        int ans = getMissingNum(arrayList);
+        for (int i=0; i< arrayList.size(); i++)
+            arr[i] = arrayList.get(i);
+
+        int ans = findMissing(arr);
         System.out.println(ans);
     }
 
-    private static int getMissingNum(ArrayList<Integer> a) {
-        int min=a.get(0), max = a.get(0);
-
-        for (int temp : a){
-            if (temp > max )
-                max = temp;
-
-            if (temp < min && temp >= 0)
-                min = temp;
-        }
-
-        if (max == a.size())
-            min = 0;
-
-        int total = ( ( max * (max +1))/2 ) - ( (min * (min+1))/2);
-
-        int sum = 0;
-        for (int d : a){
-            if (d >= 0)
-            sum += d;
-        }
-
-        return sum > 0 ? total-sum : 1;
-    }
 
     private static int findMissing(int arr[]) {
 
