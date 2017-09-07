@@ -14,7 +14,7 @@ public class MinStepInfiniteGrid {
         ArrayList<Integer> Y = new ArrayList<>(Arrays.asList(0,1,2));
 
         int minStep = getMinStep(X, Y);
-        System.out.println("Minimum step to reach from first to last point : " + minStep);
+        System.out.println("mail : " + minStep);
     }
 
     private static int getMinStep(ArrayList<Integer> x, ArrayList<Integer> y) {
