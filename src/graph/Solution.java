@@ -22,13 +22,7 @@ public class Solution {
         // Returns false if:
         //  1. x or y is out of matrix's bounds
         //  2. cell [x][y] was already visited (contains a -1) or is not filled (contains a 0)
-        if (    x < 0 ||  y < 0 ||  x >= rows ||  y >= cols ||  grid[x][y] < 1) {
-            return false;
-        }
-        else {
-            // Current cell is valid (i.e., exists in matrix, is filled and not yet visited)
-            return true;
-        }
+        return x >= 0 && y >= 0 && x < rows && y < cols && grid[x][y] >= 1;
     }
 
     /** Use DFS to return a count of the number of cells in the region connected to [x][y]. **/
