@@ -36,7 +36,6 @@ public class ConvertBinaryTreeToBST {
         root.data = inorder[index[0]];
         index[0] += 1;
         changeNodeValue(root.right, inorder, index);
-        ;
     }
 
     private static void createInOrderArray(BinaryTree root, int[] inorder, int[] index) {
