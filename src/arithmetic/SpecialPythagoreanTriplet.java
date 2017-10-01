@@ -18,6 +18,5 @@ public class SpecialPythagoreanTriplet {
                     System.out.printf("a = %d, b = %d, c = %d\n",a,b,c);
             }
         }
-        ;
     }
 }
