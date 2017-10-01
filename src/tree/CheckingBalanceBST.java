@@ -18,8 +18,6 @@ public class CheckingBalanceBST {
 
         boolean leftTree = isBalanceBinaryTree(root.left);
         boolean rightTree = isBalanceBinaryTree(root.right);
-        if (!leftTree && !rightTree)
-            return false;
-        return true;
+        return leftTree || rightTree;
     }
 }
