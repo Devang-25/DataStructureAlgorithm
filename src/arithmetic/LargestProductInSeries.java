@@ -27,7 +27,7 @@ public class LargestProductInSeries {
                     prevVal = (prevVal/leftVal) * (nums.charAt(i)-48);
                 }
             }else{
-                prevVal = getProduct(nums,i-size+1,i+1);;
+                prevVal = getProduct(nums,i-size+1,i+1);
             }
             max = Math.max(max,prevVal);
         }
