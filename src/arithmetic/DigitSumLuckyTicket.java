@@ -24,7 +24,7 @@ public class DigitSumLuckyTicket {
           preSum += copy%10;
           copy /= 10;
           count++;
-         }else break;;
+         }else break;
      }
 
      if (preSum == (totalSum-preSum))
