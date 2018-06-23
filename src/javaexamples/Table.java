@@ -1,7 +1,5 @@
 package javaexamples;
 
-import javafx.scene.control.Tab;
-
 /**
  * Created by rakeshgupta on 7/24/17.
  */

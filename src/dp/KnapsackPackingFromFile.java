@@ -63,7 +63,7 @@ public class KnapsackPackingFromFile {
 
                 if (i ==0 || w == 0) {
                     K[i][w] = 0;
-                    items[i][w] = new StringBuilder("");
+                    items[i][w] = new StringBuilder();
                 } else if (  (packageItemList.get(i-1).weight) <= w ) {
 
                             if ( ( packageItemList.get(i-1).price + K[i-1][w- (int)(packageItemList.get(i-1).weight)]) > K[i-1][w]){
