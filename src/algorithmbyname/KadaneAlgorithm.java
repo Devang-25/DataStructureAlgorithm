@@ -12,7 +12,12 @@ public class KadaneAlgorithm {
 
     }
 
-    public static int getMaxValue(int[] arr) {
+  /**
+   * This will return max possible sum of consecutive numbers.
+   * @param arr
+   * @return
+   */
+  public static int getMaxValue(int[] arr) {
         int size = arr.length;
         int finalMax = Integer.MIN_VALUE, maxTemp = 0;
 
