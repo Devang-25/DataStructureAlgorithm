@@ -1,11 +1,15 @@
 package arithmetic;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
-/**
- * Created by rakeshgupta on 7/16/17.
- */
+/******************************************************************************
+ * Copyright (c) ::                                                           *
+ * Creation Date - 5:7:2018,                                                  *
+ * Created by - Rakesh Gupta,                                                 *
+ * Package - arithmetic.ObjectCounter                                         *
+ * Last modified - 7/5/18 1:47 PM                                             *
+ * Project Name - DataStructureAlgorithm                                      *
+ ******************************************************************************/
 
 public class ObjectCounter {
     public static void addObjectsToListAndPrintCount(ArrayList<AngryNerds> list, int n) {
