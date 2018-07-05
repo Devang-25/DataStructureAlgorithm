@@ -1,8 +1,13 @@
 package algorithmbyname;
 
-/**
- * Created by rakeshgupta on 7/20/17.
- */
+/******************************************************************************
+ * Copyright (c) ::                                                           *
+ * Creation Date - 5:7:2018,                                                  *
+ * Created by - Rakesh Gupta,                                                 *
+ * Package - algorithmbyname.KadaneAlgorithm                                  *
+ * Last modified - 7/5/18 11:58 AM                                            *
+ * Project Name - DataStructureAlgorithm                                      *
+ ******************************************************************************/
 
 public class KadaneAlgorithm {
     public static void main(String[] args) {
