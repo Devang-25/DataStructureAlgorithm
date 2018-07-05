@@ -1,6 +1,13 @@
 package arithmetic;
 
-import java.util.ArrayList;
+/******************************************************************************
+ * Copyright (c) ::                                                           *
+ * Creation Date - 5:7:2018,                                                  *
+ * Created by - Rakesh Gupta,                                                 *
+ * Package - arithmetic.PrimeSum                                              *
+ * Last modified - 7/5/18 1:47 PM                                             *
+ * Project Name - DataStructureAlgorithm                                      *
+ ******************************************************************************/
 
 public class PrimeSum {
     public static void main(String[] args) {
