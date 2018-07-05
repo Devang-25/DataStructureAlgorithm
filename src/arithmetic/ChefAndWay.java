@@ -2,9 +2,15 @@ package arithmetic;
 
 import java.util.Scanner;
 
-/**
- * Created by rakeshgupta on 6/28/17.
- */
+/******************************************************************************
+ * Copyright (c) ::                                                           *
+ * Creation Date - 5:7:2018,                                                  *
+ * Created by - Rakesh Gupta,                                                 *
+ * Package - arithmetic.ChefAndWay                                            *
+ * Last modified - 7/5/18 11:58 AM                                            *
+ * Project Name - DataStructureAlgorithm                                      *
+ ******************************************************************************/
+
 public class ChefAndWay {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
