@@ -1,9 +1,15 @@
 package bitmanipulation;
 
-import com.sun.corba.se.spi.ior.IdentifiableFactory;
-
 import java.util.ArrayList;
-import java.util.Arrays;
+
+/******************************************************************************
+ * Copyright (c) ::                                                           *
+ * Creation Date - 5:7:2018,                                                  *
+ * Created by - Rakesh Gupta,                                                 *
+ * Package - bitmanipulation.DifferentBitSumPairwise                          *
+ * Last modified - 7/5/18 12:14 PM                                            *
+ * Project Name - DataStructureAlgorithm                                      *
+ ******************************************************************************/
 
 public class DifferentBitSumPairwise {
     public static void main(String[] args) {
