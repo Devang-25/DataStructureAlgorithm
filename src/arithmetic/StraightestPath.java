@@ -1,13 +1,18 @@
 package arithmetic;
 
-import java.text.CharacterIterator;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- * Created by : Rakesh Gupta on 8/20/17
- * Package : arithmetic
- */
+
+/******************************************************************************
+ * Copyright (c) ::                                                           *
+ * Creation Date - 5:7:2018,                                                  *
+ * Created by - Rakesh Gupta,                                                 *
+ * Package - arithmetic.StraightestPath                                       *
+ * Last modified - 7/5/18 1:47 PM                                             *
+ * Project Name - DataStructureAlgorithm                                      *
+ ******************************************************************************/
+
 public class StraightestPath {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
