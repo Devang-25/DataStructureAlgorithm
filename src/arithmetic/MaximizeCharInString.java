@@ -1,6 +1,17 @@
 package arithmetic;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
+
+/******************************************************************************
+ * Copyright (c) ::                                                           *
+ * Creation Date - 5:7:2018,                                                  *
+ * Created by - Rakesh Gupta,                                                 *
+ * Package - arithmetic.MaximizeCharInString                                  *
+ * Last modified - 7/5/18 1:47 PM                                             *
+ * Project Name - DataStructureAlgorithm                                      *
+ ******************************************************************************/
 
 class MaximizeCharInString {
 
