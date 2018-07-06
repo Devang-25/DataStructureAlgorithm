@@ -1,6 +1,9 @@
 
 package linkedlist;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static linkedlist.LinkedList.printLinkedList;
 
 
