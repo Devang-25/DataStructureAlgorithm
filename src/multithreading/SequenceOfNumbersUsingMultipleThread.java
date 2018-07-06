@@ -1,11 +1,14 @@
-package threading;
+package multithreading;
+
+import java.util.Timer;
+import java.util.concurrent.TimeUnit;
 
 /******************************************************************************
  * Copyright (c) ::                                                           *
- * Creation Date - 5:7:2018,                                                  *
+ * Creation Date - 6:7:2018,                                                  *
  * Created by - Rakesh Gupta,                                                 *
- * Package - threading.SequenceOfNumbersUsingMultipleThread                   *
- * Last modified - 7/5/18 12:31 PM                                            *
+ * Package - multithreading.SequenceOfNumbersUsingMultipleThread              *
+ * Last modified - 7/5/18 1:57 PM                                             *
  * Project Name - DataStructureAlgorithm                                      *
  ******************************************************************************/
 
@@ -30,15 +33,12 @@ public class SequenceOfNumbersUsingMultipleThread {
         public synchronized void run() {
             while(i<10)
             {
-
                 try{
                     notify();
                     System.out.println(Thread.currentThread().getName()+" :: "+i);
                     i++;
                     wait();
-
                 }catch(Exception e){ e.printStackTrace(); }
-
             }
         }
     }
