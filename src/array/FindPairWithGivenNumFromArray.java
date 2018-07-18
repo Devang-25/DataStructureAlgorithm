@@ -1,6 +1,7 @@
 package array;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 /******************************************************************************
  * Copyright (c) ::                                                           *
@@ -24,15 +25,14 @@ public class FindPairWithGivenNumFromArray {
         else
             System.out.println("Array doesn't have two elements with given sum");
 
+        printpairs(A, n);
     }
 
     private static boolean hasArrayTwoCandidates(int A[],
-                                         int arrSize, int sum) {
+                                                 int arrSize, int sum) {
         int left, right;
-
         /* Sort the elements */
         Arrays.sort(A);
-
         /* Now look for the two candidates
         in the sorted array*/
         left = 0;
@@ -46,5 +46,18 @@ public class FindPairWithGivenNumFromArray {
                 right--;
         }
         return false;
+    }
+
+    static void printpairs(int arr[], int sum) {
+        HashSet<Integer> s = new HashSet<Integer>();
+        for (int i = 0; i < arr.length; ++i) {
+            int temp = sum - arr[i];
+
+            // checking for condition
+            if (temp >= 0 && s.contains(temp)) {
+                System.out.println("Pair with given sum " + sum + " is (" + arr[i] + ", " + temp + ")");
+            }
+            s.add(arr[i]);
+        }
     }
 }

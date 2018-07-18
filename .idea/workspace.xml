@@ -65,9 +65,12 @@
       <file leaf-file-name="FindPairWithGivenNumFromArray.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/array/FindPairWithGivenNumFromArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-              <folding />
+            <state relative-caret-position="238">
+              <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1853#1862#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -927,7 +930,14 @@
       <option name="project" value="LOCAL" />
       <updated>1531895485382</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Finding pair with given num from array(Code refactor)">
+      <created>1531895611509</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1531895611509</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1029,7 +1039,8 @@
     <MESSAGE value="Solution of problem finding remaining weight of stone after collision." />
     <MESSAGE value="Printing sequence using two thread" />
     <MESSAGE value="Finding pair with given num from array" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finding pair with given num from array" />
+    <MESSAGE value="Finding pair with given num from array(Code refactor)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finding pair with given num from array(Code refactor)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1426,9 +1437,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/array/FindPairWithGivenNumFromArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1853#1862#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
