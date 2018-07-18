@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list id="9b8a7f39-dc00-46d7-acab-6c452b3f7103" name="Unversioned" comment="" />
     <list default="true" id="d33d2f59-af55-40ab-ba10-b13400167c0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/array/FindPairWithGivenNumFromArray.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/array/FindPairWithGivenNumFromArray.java" afterPath="$PROJECT_DIR$/src/array/FindPairWithGivenNumFromArray.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,8 +65,8 @@
       <file leaf-file-name="FindPairWithGivenNumFromArray.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/array/FindPairWithGivenNumFromArray.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="42" />
+            <state relative-caret-position="510">
+              <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -920,7 +920,14 @@
       <option name="project" value="LOCAL" />
       <updated>1530882630381</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Finding pair with given num from array">
+      <created>1531895485382</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1531895485382</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1021,7 +1028,8 @@
     <MESSAGE value="Printing Sequence of numbers using multiple thread" />
     <MESSAGE value="Solution of problem finding remaining weight of stone after collision." />
     <MESSAGE value="Printing sequence using two thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="Printing sequence using two thread" />
+    <MESSAGE value="Finding pair with given num from array" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finding pair with given num from array" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1418,8 +1426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/array/FindPairWithGivenNumFromArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="42" />
+        <state relative-caret-position="510">
+          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding />
         </state>
       </provider>
