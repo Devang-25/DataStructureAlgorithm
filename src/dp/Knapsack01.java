@@ -9,6 +9,7 @@ public class Knapsack01 {
         int val[] = new int[]{13 , 64,  79,  45, 79, 16, 36,10,40};
 
         System.out.println(knapSack(56, w, val, val.length));
+        System.out.println(knapSack(56, w, val, val.length));
     }
 
     static double knapSack(int W, double wt[], int val[], int n) {
@@ -26,6 +27,19 @@ public class Knapsack01 {
             }
         }
 
+
         return K[n][W];
+    }
+
+    private static int knapSack(int maxWeight, int[] wtArr, int[] valArr, int n){
+        if(n == 0 || maxWeight == 0)
+            return 0;
+
+        if(wtArr[n-1] > maxWeight){
+            return knapSack(maxWeight, wtArr, valArr, n-1);
+        } else{
+            return Math.max(valArr[n-1] + knapSack(maxWeight-wtArr[n-1], wtArr, valArr, n-1),
+                    knapSack(maxWeight, wtArr, valArr, n-1));
+        }
     }
 }

@@ -48,5 +48,4 @@ public class PrimeSum {
         return true;
     }
 
-
 }

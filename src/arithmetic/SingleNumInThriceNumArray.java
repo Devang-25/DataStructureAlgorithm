@@ -25,7 +25,7 @@ public class SingleNumInThriceNumArray {
         a.add(7);
 
         int singleNum = singleNumber(a);
-        System.out.println(" Single num in list of thrice each number list : " + singleNum);
+        System.out.println("Single num in list of thrice each number list : " + singleNum);
     }
 
     public static int singleNumber(final List<Integer> arr) {
