@@ -67,7 +67,6 @@ public class LRUCache {
             newnode.value = value;
             newnode.key = key;
 
-            // We have reached maxium size so need to make room for new element.
             if (hashmap.size() > LRU_SIZE) {
                  hashmap.remove(end.key);
                 removeNode(end);
