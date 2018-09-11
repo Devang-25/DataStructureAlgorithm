@@ -7,7 +7,7 @@ import java.util.LinkedList;
  * Copyright (c) ::                                                           *
  * Creation Date - 11:9:2018,                                                 *
  * Created by - Rakesh Gupta,                                                 *
- * Package - osalgorithm.LRUCache                                             *
+ * Package - osalgorithm.LRUCacheImpl                                             *
  * Last modified - 9/11/18 11:42 AM                                           *
  * Project Name - DataStructureAlgorithm                                      *
  ******************************************************************************/
