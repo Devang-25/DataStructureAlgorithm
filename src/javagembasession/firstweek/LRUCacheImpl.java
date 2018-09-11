@@ -1,7 +1,5 @@
 package javagembasession.firstweek;
 
-import osalgorithm.LRUCache;
-
 /******************************************************************************
  * Copyright (c) ::                                                           *
  * Creation Date - 11:9:2018,                                                 *
