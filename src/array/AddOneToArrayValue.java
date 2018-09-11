@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class AddOneToArrayValue {
     public static void main(String[] args) {
-        int arr[] = {0};
+        int arr[] = {12,9,9};
         //int newArr[] = new int[arr.length+1];
         ArrayList<Integer> newArr = new ArrayList<>();
 
