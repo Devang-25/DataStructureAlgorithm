@@ -1,6 +1,5 @@
 package linkedlist;
 
-import javax.naming.ldap.PagedResultsControl;
 
 public class ReverseLinkedList {
     public static void main(String[] args) {

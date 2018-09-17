@@ -1,6 +1,7 @@
 package arithmetic;
 
 import java.util.Map;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 /**
@@ -15,14 +16,36 @@ public class EqualDivision {
 //
 //        System.out.println(b/a);
 
-        Map<String, Integer> map = new TreeMap<>();
-        map.put("Gamma",  3);
-        map.put("Omega", 24);
-        map.put("Alpha",  1);
+//        Map<String, Integer> map = new TreeMap<>();
+//        map.put("Gamma",  3);
+//        map.put("Omega", 24);
+//        map.put("Alpha",  1);
 
-        for (Map.Entry<String, Integer> m: map.entrySet()){
-            System.out.println(m.getKey()+"="+m.getValue());
+//        for (Map.Entry<String, Integer> m: map.entrySet()){
+//            System.out.println(m.getKey()+"="+m.getValue());
+//        }
+
+        Scanner s = new Scanner(System.in);
+        int num = s.nextInt();
+
+        for (int n = 2; n < num; n++) {
+            if (isPrime(n)) {
+                System.out.print(n + " ");
+            }
+        }
+    }
+
+        private static boolean isPrime(int n) {
+
+            if (n > 2 && n%2 == 0)
+                return false;
+
+            int top = ((int) Math.sqrt(n))+1;
+            for (int j = 3; j < top; j+=2) {
+                if (n % j == 0)
+                    return false;
+            }
+            return true;
         }
 
-    }
 }

@@ -1,4 +1,4 @@
-package hackerearthchallenge;
+package hackerearthchallenge.common;
 
 import java.util.ArrayList;
 import java.util.Arrays;
