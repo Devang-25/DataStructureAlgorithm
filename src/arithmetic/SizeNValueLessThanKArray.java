@@ -15,7 +15,7 @@ public class SizeNValueLessThanKArray {
         for (int d : arr)
             stringBuffer.append(d);
 
-        int B = 1;
+        int B = 2;
         int C = 2;
         printAllKLengthRec(stringBuffer.toString(), "", B, C);
         System.out.println(counter);
