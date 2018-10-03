@@ -1,32 +1,30 @@
 package javagembasession.firstweek;
 
-import java.util.HashMap;
-
 /******************************************************************************
  * Copyright (c) ::                                                           *
- * Creation Date - 14:9:2018,                                                 *
+ * Creation Date - 11:9:2018,                                                 *
  * Created by - Rakesh Gupta,                                                 *
- * Package - javagembasession.firstweek.LRUCacheImpl                          *
- * Last modified - 9/14/18 2:54 PM                                            *
+ * Package - javagembasession.firstweek.LRUCacheImplWithCustomHashMap                          *
+ * Last modified - 9/11/18 2:45 PM                                            *
  * Project Name - DataStructureAlgorithm                                      *
  ******************************************************************************/
 
-public class LRUCacheImpl {
+public class LRUCacheImplWithCustomHashMap {
 
-    private HashMap<Integer, EntryNode> mapImpl;
+    private HashMapCustom<Integer, EntryNode> mapImpl;
 
-    private EntryNode start, end;
+    private EntryNode start, end, head;
 
     // Size of LRU Cache.
-    private static final int LRU_SIZE = 4;
+    private static final int LRU_SIZE = 3;
 
-    public LRUCacheImpl() {
-        mapImpl = new HashMap<>();
+    public LRUCacheImplWithCustomHashMap() {
+        mapImpl = new HashMapCustom<>();
     }
 
     public static void main(String[] args) {
 
-        LRUCacheImpl cache = new LRUCacheImpl();
+        LRUCacheImplWithCustomHashMap cache = new LRUCacheImplWithCustomHashMap();
         cache.putEntry(1, 1);
         cache.putEntry(10, 10);
         cache.putEntry(15, 15);
@@ -41,7 +39,7 @@ public class LRUCacheImpl {
 
     public int getEntry(int key) {
 
-        if (mapImpl.containsKey(key)) {
+        if (mapImpl.get(key) != null) {
             EntryNode entry = mapImpl.get(key);
             removeNode(entry);
             addAtTop(entry);
@@ -53,7 +51,7 @@ public class LRUCacheImpl {
 
     public void putEntry(int key, int value) {
 
-        if (mapImpl.containsKey(key)) {
+        if (mapImpl.get(key) != null) {
             EntryNode entry = mapImpl.get(key);
             entry.value = value;
             removeNode(entry);
@@ -87,6 +85,9 @@ public class LRUCacheImpl {
         start = node;
         if (end == null)
             end = start;
+        if (head == null){
+            head = start;
+        }
     }
 
     public void removeNode(EntryNode node) {
@@ -111,4 +112,5 @@ public class LRUCacheImpl {
         }
         System.out.println("null");
     }
+
 }

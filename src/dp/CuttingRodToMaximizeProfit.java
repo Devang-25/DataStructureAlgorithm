@@ -9,7 +9,7 @@ public class CuttingRodToMaximizeProfit {
         int len = rodValue.length;
 
         int maxProfit = getMaxProfit(rodValue, len);
-        System.out.println("Maximum obtainable value is(Using Recursion) : " + maxProfit);
+       // System.out.println("Maximum obtainable value is(Using Recursion) : " + maxProfit);
         System.out.println("Maximum obtainable value is(Using Dynamic Programming) : " + getMaximumProfit(rodValue, len));
     }
 
@@ -19,7 +19,7 @@ public class CuttingRodToMaximizeProfit {
         if (len <= 0)
             return 0;
 
-        int maxValue = Integer.MIN_VALUE;
+        int maxValue = 0;
          for (int i = 0; i < len; i++) {
              maxValue = Math.max(maxValue, rodValue[i] + getMaxProfit(rodValue, len-i-1));
          }
