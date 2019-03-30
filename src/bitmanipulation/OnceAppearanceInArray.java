@@ -7,8 +7,8 @@ package bitmanipulation;
 public class OnceAppearanceInArray {
     public static void main(String[] args) {
         int[] arr = {2, 3, 4, 5, 5, 4, 3, 2, 1, 1, 8, 9, 9};
-
-        int onceAppeared = findRequiredNum(arr, 2);
+        int[] arr2 = {2, 3, 4, 5, 5, 4, 3, 5, 4, 2, 2};
+        int onceAppeared = findRequiredNum(arr2, 3);
         System.out.println("Find the element that appeared once in array : " + onceAppeared);
         System.out.println("-------" + firstAppearance(arr));
     }
