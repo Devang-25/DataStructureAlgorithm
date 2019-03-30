@@ -6,10 +6,11 @@ package bitmanipulation;
  */
 public class OnceAppearanceInArray {
     public static void main(String[] args) {
-        int[] arr = {2,3,4,5,5,4,3,2,1,8,8,9,9};
+        int[] arr = {2, 3, 4, 5, 5, 4, 3, 2, 1, 1, 8, 9, 9};
 
         int onceAppeared = findRequiredNum(arr, 2);
         System.out.println("Find the element that appeared once in array : " + onceAppeared);
+        System.out.println("-------" + firstAppearance(arr));
     }
 
     public static int findRequiredNum(int arr[], int N) {
@@ -34,4 +35,11 @@ public class OnceAppearanceInArray {
         return occurredOnce;
     }
 
+    private static int firstAppearance(int[] arr) {
+        int xor = 0;
+        for (int a : arr) {
+            xor ^= a;
+        }
+        return xor;
+    }
 }
