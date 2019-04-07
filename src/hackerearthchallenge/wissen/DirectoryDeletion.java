@@ -26,7 +26,6 @@ public class DirectoryDeletion {
             directoryDeletion.insertEdge(scanner.nextInt(), i);
         }
         int m = scanner.nextInt();
-        int[] a = new int[m];
         for (int i = 0; i < m; i++) {
             intMap.put(scanner.nextInt(), 1);
         }
