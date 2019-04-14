@@ -21,6 +21,21 @@ public class BinaryTreeData {
         return binaryTree;
     }
 
+    public static BinaryTree getBinaryTreeRandomData() {
+        BinaryTree binaryTree = new BinaryTree(4);
+        BinaryTree leftNode1 = new BinaryTree(2);
+        BinaryTree rightNode1 = new BinaryTree(6);
+        leftNode1.setLeft(new BinaryTree(1));
+        leftNode1.setRight(new BinaryTree(3));
+
+        rightNode1.setLeft(new BinaryTree(5));
+        rightNode1.setRight(new BinaryTree(7));
+
+        binaryTree.setLeft(leftNode1);
+        binaryTree.setRight(rightNode1);
+        return binaryTree;
+    }
+
     public static  BinaryTree getRandomPopulatedData(){
         BinaryTree root = new BinaryTree(4);
         root.left = new BinaryTree(66);
@@ -49,6 +64,9 @@ public class BinaryTreeData {
     }
 
     public static void main(String[] args) {
-        BinaryTree.preOrder(getBSTData(3, 100));
+        //BinaryTree.preOrder(getBSTData(3, 100));
+        BinaryTree root = getBinaryTreeRandomData();
+        BinaryTree.printTree(root);
+        BinaryTree.printTree(BinaryTree.deleteNode(root, 6));
     }
 }
