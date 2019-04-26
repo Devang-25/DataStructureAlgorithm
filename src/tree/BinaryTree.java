@@ -3,6 +3,7 @@ package tree;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * Created by rakeshgupta on 7/9/17.
@@ -11,6 +12,23 @@ public class BinaryTree {
     public BinaryTree left;
     public BinaryTree right;
     int data;
+
+    public static int getSize(BinaryTree root) {
+        BinaryTree current = root;
+        int size = 0;
+        Stack<BinaryTree> stack = new Stack<>();
+        while (!stack.isEmpty() || current != null) {
+            if (current != null) {
+                stack.push(current);
+                current = current.left;
+            } else {
+                size++;
+                current = stack.pop();
+                current = current.right;
+            }
+        }
+        return size;
+    }
 
     public BinaryTree(int data) {
         this.data = data;
@@ -31,6 +49,47 @@ public class BinaryTree {
         preOrder(root.left);
         preOrder(root.right);
     }
+
+    public static void preOrderWithoutRecursion(BinaryTree root) {
+        Stack<BinaryTree> nodes = new Stack<>();
+        nodes.push(root);
+        while (!nodes.isEmpty()) {
+            BinaryTree current = nodes.pop();
+            System.out.printf("%s ", current.data);
+            if (current.right != null) {
+                nodes.push(current.right);
+            }
+            if (current.left != null) {
+                nodes.push(current.left);
+            }
+        }
+    }
+
+    public static void postOrderWithoutRecursion(BinaryTree root) {
+        Stack<BinaryTree> nodes = new Stack<>();
+        nodes.push(root);
+        while (!nodes.isEmpty()) {
+            BinaryTree current = nodes.peek();
+            if (current.isLeaf()) {
+                BinaryTree node = nodes.pop();
+                System.out.printf("%s ", node.data);
+            } else {
+                if (current.right != null) {
+                    nodes.push(current.right);
+                    current.right = null;
+                }
+                if (current.left != null) {
+                    nodes.push(current.left);
+                    current.left = null;
+                }
+            }
+        }
+    }
+
+    private boolean isLeaf() {
+        return this.left == null ? this.right == null : false;
+    }
+
 
     public static void inOrder(BinaryTree root) {
         if (root == null)
