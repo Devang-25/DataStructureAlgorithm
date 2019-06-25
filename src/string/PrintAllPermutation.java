@@ -13,7 +13,7 @@ public class PrintAllPermutation {
     public void doPermutation(StringBuffer str, int index){
         if (index <= 0) {
             System.out.printf(str.toString());
-            System.out.print(" ");
+            System.out.print(" \n");
         }
         else {
             doPermutation(str, index-1);

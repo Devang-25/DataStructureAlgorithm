@@ -14,19 +14,20 @@ public class EvenOddPrinting {
             Thread.sleep(2000);
         }
     }
-}
 
-class NewThread implements Runnable{
-    @Override
-    public void run() {
-        for (int j=2;j<=10;j=j+2){
-            System.out.print("T2:" + j + "  ");
-            try {
-                Thread.sleep(4000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+   static class NewThread implements Runnable{
+        @Override
+        public void run() {
+            for (int j=2;j<=10;j=j+2){
+                System.out.print("T2:" + j + "  ");
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
-    }
 
+    }
 }
+

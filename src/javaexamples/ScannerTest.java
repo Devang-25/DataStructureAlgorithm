@@ -1,16 +1,33 @@
 package javaexamples;
 
-import java.util.Scanner;
-
 /**
  * Created by rakeshgupta on 7/27/17.
  */
 public class ScannerTest {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter your name : ");
-        String name = input.nextLine();
 
-        System.out.println("Hello " + name + "!!");
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("DBS");
+            }
+        };
+
+        Thread t = new Thread(r) {
+            @Override
+            public void run() {
+                System.out.println("ASIA");
+            }
+        };
+
+        t.start();
+
     }
+    public static void tet(byte... a){
+        System.out.println("long");
+    }
+    public static void tet(int a, int b, int c){
+        System.out.println("int");
+    }
+
 }

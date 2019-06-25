@@ -29,6 +29,7 @@ public class StreamExample {
     }
 
     public static void printIntStream(IntStream intStream){
+
         Iterator iterator = intStream.iterator();
         while (iterator.hasNext()){
             System.out.print(iterator.next()+ " ");

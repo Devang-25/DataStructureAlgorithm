@@ -11,10 +11,14 @@ public class MaxSumInLongestOfIncreasingSubSequence {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        int arr[] = new int[s.nextInt()];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = s.nextInt();
-        }
+        int arr[] = new int[]{
+                1, 3, 5, 2, 4, 9, 11, 6
+        };
+
+//         new int[s.nextInt()];
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = s.nextInt();
+//        }
         System.out.println("Maximum sum increasing sub-sequence : " + getMaxSumOfLongestIncreasingSubSeq(arr));
     }
 

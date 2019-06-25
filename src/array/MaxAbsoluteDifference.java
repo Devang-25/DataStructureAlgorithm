@@ -15,7 +15,7 @@ public class MaxAbsoluteDifference {
             }
         }
 
-        System.out.println("Maximumu absolute difference is : " + max);
+        System.out.println("Maximum absolute difference is : " + max);
 
         int a = getMin(arr);
         System.out.println(a);

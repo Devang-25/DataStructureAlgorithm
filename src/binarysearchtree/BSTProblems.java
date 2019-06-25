@@ -10,24 +10,7 @@ import static tree.binarytree.BinaryTree.inOrder;
 public class BSTProblems {
 
     public static void main(String[] args) {
-        BinaryTree.Node bSTRoot = new BinaryTree.Node(10);
-        BinaryTree.Node leftChild = new BinaryTree.Node(9);
-        BinaryTree.Node rightChild = new BinaryTree.Node(11);
-
-        bSTRoot.setLeftChild(leftChild);
-        bSTRoot.setRightChild(rightChild);
-
-        BinaryTree.Node leftChild4 = new BinaryTree.Node(4);
-        BinaryTree.Node rightChild15 = new BinaryTree.Node(15);
-
-        leftChild.setLeftChild(leftChild4);
-        rightChild.setRightChild(rightChild15);
-
-        leftChild4.setLeftChild(new BinaryTree.Node(3));
-        leftChild4.setRightChild(new BinaryTree.Node(6));
-
-        rightChild15.setLeftChild(new BinaryTree.Node(14));
-        rightChild15.setRightChild(new BinaryTree.Node(18));
+        BinaryTree.Node bSTRoot = BinarySearchTree.getBSTDataPopulatedTree();
 
         System.out.println();
         System.out.println("*******Finding minimum in Binary Search Tree*********");
@@ -58,7 +41,8 @@ public class BSTProblems {
 
     }
 
-    private static boolean isBinarySearchTree(BinaryTree.Node root, int min, int max ){
+
+    private static boolean isBinarySearchTree(BinaryTree.Node root, int min, int max) {
         if (root == null)
             return true;
 
@@ -69,10 +53,10 @@ public class BSTProblems {
                 && isBinarySearchTree(root.getRightChild(), ((int) root.getData()), max);
     }
 
-    private static void printRange(BinaryTree.Node root, int low, int high){
+    private static void printRange(BinaryTree.Node root, int low, int high) {
         if (root == null)
             return;
-        if (low <= (int)root.getData())
+        if (low <= (int) root.getData())
             printRange(root.getLeftChild(), low, high);
         if (low <= ((int) root.getData()) && ((int) root.getData()) <= high)
             System.out.println(root.getData());
@@ -81,14 +65,14 @@ public class BSTProblems {
             printRange(root.getRightChild(), low, high);
     }
 
-    private static int countTrees(int numNodes){
+    private static int countTrees(int numNodes) {
         if (numNodes <= 1)
             return 1;
 
         int sum = 0;
         for (int i = 1; i <= numNodes; i++) {
-            int countLeftTrees = countTrees(i-1);
-            int countRightTrees = countTrees(numNodes-1);
+            int countLeftTrees = countTrees(i - 1);
+            int countRightTrees = countTrees(numNodes - 1);
 
             sum = sum + (countLeftTrees * countRightTrees);
         }
@@ -116,7 +100,7 @@ public class BSTProblems {
         return Math.max(leftMaxDepth, rightMaxDepth);
     }
 
-    public static int minValue(BinaryTree.Node root){
+    public static int minValue(BinaryTree.Node root) {
         if (root == null)
             return -1;
 

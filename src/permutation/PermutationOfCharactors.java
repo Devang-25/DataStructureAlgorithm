@@ -6,7 +6,7 @@ package permutation;
 public class PermutationOfCharactors {
 
     public static void main(String[] args) {
-        char[] input = { 'a', 'b', 'c', 'd'};
+        char[] input = { '1', '0'};
         permute(input, 0);
     }
 

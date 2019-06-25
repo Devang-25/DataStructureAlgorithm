@@ -1,9 +1,7 @@
 package bitmanipulation;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * Created by : Rakesh Gupta on 9/6/17
@@ -33,8 +31,8 @@ public class MinXORValueArray {
         Arrays.sort(arr);
         int min = Integer.MAX_VALUE;
 
-        for (int size = arr.length,i = 0; i < size-1; i++) {
-            min = Math.min(min, arr[i]^arr[i+1]);
+        for (int size = arr.length, i = 0; i < size - 1; i++) {
+            min = Math.min(min, arr[i] ^ arr[i + 1]);
         }
 
         return min;
@@ -46,8 +44,8 @@ public class MinXORValueArray {
         arr.sort(null);
         int min = Integer.MAX_VALUE;
         int size = arr.size();
-        for (int i = 0; i < size-1; i++) {
-            min = Math.min(min, (((int) arr.get(i))^ ((int) arr.get(i + 1))));
+        for (int i = 0; i < size - 1; i++) {
+            min = Math.min(min, (((int) arr.get(i)) ^ ((int) arr.get(i + 1))));
         }
         return min;
     }

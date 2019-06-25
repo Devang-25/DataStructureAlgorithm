@@ -9,7 +9,7 @@ public class Knapsack01 {
         int val[] = new int[]{13 , 64,  79,  45, 79, 16, 36,10,40};
 
         System.out.println(knapSack(56, w, val, val.length));
-        System.out.println(knapSack(56, w, val, val.length));
+       // System.out.println(knapSack(56, w, val, val.length));
     }
 
     static double knapSack(int W, double wt[], int val[], int n) {

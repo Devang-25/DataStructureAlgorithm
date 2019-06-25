@@ -6,7 +6,7 @@ package dp;
  */
 public class AllPossiblePathMatrix {
     public static void main(String[] args) {
-        int row = 4, col = 3;
+        int row = 4, col = 4;
         int ans = getNumOfPaths(row, col);
         System.out.println("Number of all path(Recursive Algo) from top to bottom in matrix of size : " + row + " * " + col + " is : " + ans);
 

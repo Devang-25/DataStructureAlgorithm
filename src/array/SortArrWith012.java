@@ -9,19 +9,21 @@ import java.util.StringTokenizer;
 public class SortArrWith012 {
     public static void main(String[] args) {
         InputReader sc = new InputReader();
-        int t = sc.nextInt();
+     //   int t = sc.nextInt();
+     //   for (int i = 0; i < t; i++) {
+     //       int n = sc.nextInt();
 
-        for (int i = 0; i < t; i++) {
-            int n = sc.nextInt();
-            int arr[] = new int[n];
-            for (int j = 0; j < n; j++) {
-                arr[j] = sc.nextInt();
-            }
+        int arr[] = {0, 2,0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 2};
+
+//             new int[n];
+//            for (int j = 0; j < n; j++) {
+//                arr[j] = sc.nextInt();
+//            }
             System.out.println("Before sorting : " + Arrays.toString(arr));
             //sortArrWith012(arr);
             sortArrWith012WithoutCount(arr);
             System.out.println("After sorting : " + Arrays.toString(arr));
-        }
+     //   }
     }
 
     private static void sortArrWith012WithoutCount(int[] arr) {
@@ -49,11 +51,6 @@ public class SortArrWith012 {
                 }
             }
         }
-        StringBuffer out = new StringBuffer();
-        for (int j = 0; j < arr.length; j++) {
-            out.append(arr[j] + " ");
-        }
-        System.out.println(out.toString());
     }
 
     private static void sortArrWith012(int[] arr) {

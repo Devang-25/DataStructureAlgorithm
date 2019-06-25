@@ -16,7 +16,7 @@ public class FindPairWithGivenNumFromArray {
 
     public static void main(String[] args) {
 
-        int A[] = {1, 4, 45, 6, 10, -8};
+        int A[] = {1, 4, 45, 6, 10, -8, 12};
         int n = 16;
         int arrSize = A.length;
 

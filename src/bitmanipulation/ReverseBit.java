@@ -2,7 +2,7 @@ package bitmanipulation;
 
 public class ReverseBit {
     public static void main(String[] args) {
-        long n = 0L;
+        long n = 2147483648L;
         String nBit = Long.toBinaryString(n);
         StringBuffer reverseBit = new StringBuffer(nBit).reverse();
 
@@ -10,5 +10,6 @@ public class ReverseBit {
             reverseBit.append(0);
         }
         long ans = Long.parseLong(reverseBit.toString(), 2);
+        System.out.println(ans);
     }
 }

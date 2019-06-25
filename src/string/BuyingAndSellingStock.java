@@ -6,8 +6,7 @@ package string;
  */
 public class BuyingAndSellingStock {
     public static void main(String[] args) {
-        int[] stockPrice = new int[]{100, 30, 50, 10, 60, 127};
-
+        int[] stockPrice = new int[]{7,1,5,3,6,4};
         int maxProfit = getMaxProfitFromStock(stockPrice);
         System.out.println("Maximum stock price from buying and selling : " + maxProfit);
     }
