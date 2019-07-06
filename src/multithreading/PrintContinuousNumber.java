@@ -14,34 +14,33 @@ public class PrintContinuousNumber {
         t2.setPriority(1);
         t1.start();
         t2.start();
-
     }
-}
 
+    static class TestThread extends Thread {
+        private static boolean evenFlag = true;
 
+        public synchronized void run() {
 
-class TestThread extends Thread{
-    private static boolean evenFlag = true;
-
-    public synchronized void run() {
-
-        if (evenFlag == true) {
-            printEven();
-        } else {
-            printOdd();
+            if (evenFlag == true) {
+                printEven();
+            } else {
+                printOdd();
+            }
+            Thread.yield();
         }
-        Thread.yield();
-    }
-    public void printEven() {
-        for (int i = 0; i <= 10; i += 2) {
-            System.out.print(i+" ");
+
+        public void printEven() {
+            for (int i = 0; i <= 10; i += 2) {
+                System.out.print(i + " ");
+            }
+            evenFlag = false;
         }
-        evenFlag = false;
-    }
-    public  void printOdd() {
-        for (int i = 1; i < 10; i += 2) {
-            System.out.print(i+" ");
+
+        public void printOdd() {
+            for (int i = 1; i < 10; i += 2) {
+                System.out.print(i + " ");
+            }
+            evenFlag = true;
         }
-        evenFlag = true;
     }
 }

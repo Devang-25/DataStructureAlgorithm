@@ -1,24 +1,19 @@
-package javagembasession.firstweek;
+package osalgorithm;
 
 import java.util.HashMap;
 
-/******************************************************************************
- * Copyright (c) ::                                                           *
- * Creation Date - 14:9:2018,                                                 *
- * Created by - Rakesh Gupta,                                                 *
- * Package - javagembasession.firstweek.LRUCacheImpl                          *
- * Last modified - 9/14/18 2:54 PM                                            *
- * Project Name - DataStructureAlgorithm                                      *
- ******************************************************************************/
-
+/**
+ * **************************************************************************** Copyright (c) :: *
+ * Creation Date - 14:9:2018, * Created by - Rakesh Gupta, * Package - osalgorithm.LRUCacheImpl *
+ * Last modified - 9/14/18 2:54 PM * Project Name - DataStructureAlgorithm *
+ * ****************************************************************************
+ */
 public class LRUCacheImpl {
-
-    private HashMap<Integer, EntryNode> mapImpl;
-
-    private EntryNode start, end;
 
     // Size of LRU Cache.
     private static final int LRU_SIZE = 4;
+    private HashMap<Integer, EntryNode> mapImpl;
+    private EntryNode start, end;
 
     public LRUCacheImpl() {
         mapImpl = new HashMap<>();
@@ -33,10 +28,12 @@ public class LRUCacheImpl {
         cache.putEntry(55, 55);
 
         cache.printLRUCache(cache.start);
-
         System.out.println(cache.getEntry(1));
+        cache.printLRUCache(cache.start);
         System.out.println(cache.getEntry(10));
+        cache.printLRUCache(cache.start);
         System.out.println(cache.getEntry(15));
+        cache.printLRUCache(cache.start);
     }
 
     public int getEntry(int key) {
@@ -66,7 +63,7 @@ public class LRUCacheImpl {
             newnode.key = key;
 
             // Decrease one for index and size sync.
-            if (mapImpl.size() > (LRU_SIZE-1)) {
+            if (mapImpl.size() > (LRU_SIZE - 1)) {
                 mapImpl.remove(end.key);
                 removeNode(end);
                 addAtTop(newnode);
@@ -82,11 +79,9 @@ public class LRUCacheImpl {
     public void addAtTop(EntryNode node) {
         node.right = start;
         node.left = null;
-        if (start != null)
-            start.left = node;
+        if (start != null) start.left = node;
         start = node;
-        if (end == null)
-            end = start;
+        if (end == null) end = start;
     }
 
     public void removeNode(EntryNode node) {
@@ -105,10 +100,17 @@ public class LRUCacheImpl {
     }
 
     private void printLRUCache(EntryNode entryNode) {
-        while (entryNode != null){
-            System.out.print(entryNode.value+"->");
+        while (entryNode != null) {
+            System.out.print(entryNode.value + "->");
             entryNode = entryNode.right;
         }
         System.out.println("null");
+    }
+
+    static class EntryNode {
+        int value;
+        int key;
+        EntryNode left;
+        EntryNode right;
     }
 }

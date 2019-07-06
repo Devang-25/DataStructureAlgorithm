@@ -1,8 +1,5 @@
 package multithreading;
 
-import java.util.Timer;
-import java.util.concurrent.TimeUnit;
-
 /******************************************************************************
  * Copyright (c) ::                                                           *
  * Creation Date - 6:7:2018,                                                  *
@@ -31,15 +28,17 @@ public class SequenceOfNumbersUsingMultipleThread {
         int i = 0;
         @Override
         public synchronized void run() {
-            while(i<10)
+            while (i < 11)
             {
                 try{
                     notify();
                     System.out.println(Thread.currentThread().getName()+" :: "+i);
+                    Thread.sleep(1000);
                     i++;
                     wait();
                 }catch(Exception e){ e.printStackTrace(); }
             }
         }
     }
+
 }

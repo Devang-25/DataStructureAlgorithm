@@ -9,12 +9,12 @@ public class SpiralFormMatrix {
   private static void spiralPrint(int m, int n, int a[][]) {
     int i, k = 0, l = 0;
 
-    /*  k - starting row index
-    m - ending row index
-    l - starting column index
-    n - ending column index
-    i - iterator
-    */
+        /*  k - starting row index
+        m - ending row index
+        l - starting column index
+        n - ending column index
+        i - iterator
+        */
 
     while (k < m && l < n) {
       // Print the first row from the remaining rows

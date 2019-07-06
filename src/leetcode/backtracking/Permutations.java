@@ -16,15 +16,15 @@ import java.util.LinkedList;
 import java.util.List;
 
 class Permutations {
-    public List<List<Integer>> permute(int[] nums) {
-        LinkedList<List<Integer>> result = new LinkedList<List<Integer>>();
-        result.add(new ArrayList<Integer>());
+    private static List<List<Integer>> permute(int[] nums) {
+        LinkedList<List<Integer>> result = new LinkedList<>();
+        result.add(new ArrayList<>());
         for (int n: nums) {
             int size = result.size();
             while(size > 0) {
                 List<Integer> current = result.pollFirst();
                 for (int i = 0; i <= current.size(); i++) {
-                    List<Integer> temp = new ArrayList<Integer>(current);
+                    List<Integer> temp = new ArrayList<>(current);
                     temp.add(i, n);
                     result.add(temp);
                 }
@@ -33,5 +33,9 @@ class Permutations {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(permute(new int[]{1, 2, 3}));
     }
 }

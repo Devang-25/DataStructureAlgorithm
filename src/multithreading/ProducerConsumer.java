@@ -21,7 +21,7 @@ public class ProducerConsumer {
         };
 
         new Thread(producer).start();
-        new Thread(producer).start();
+        //new Thread(producer).start();
 
         //Consumer
         final Runnable consumer = () -> {
