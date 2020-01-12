@@ -9,14 +9,14 @@ import java.util.Queue;
  */
 public class NumberOfFullNodeInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         System.out.println("Number of Full node in Binary Tree : " + numberOfFullNodeInBinaryTree(binaryTree));
     }
 
     private static int numberOfFullNodeInBinaryTree(BinaryTree root) {
+        if (root == null ) return 0;
+
         int count = 0;
-        if (root == null )
-            return 0;
         Queue<BinaryTree> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()){

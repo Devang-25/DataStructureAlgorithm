@@ -12,7 +12,7 @@ public class Knapsack01 {
        // System.out.println(knapSack(56, w, val, val.length));
     }
 
-    static double knapSack(int W, double wt[], int val[], int n) {
+    private static double knapSack(int W, double wt[], int val[], int n) {
         int i, w;
         double K[][] = new double[n+1][W+1];
 

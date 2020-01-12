@@ -5,12 +5,12 @@ package linkedlist;
 //all nodes less than x come before all nodes greater than or equal to x.
 
 public class Partition {
-    LinkedList.LinkedListNode partition(LinkedList.LinkedListNode node, int x) {
-        LinkedList.LinkedListNode head = node;
-        LinkedList.LinkedListNode tail = node;
+    ListNode partition(ListNode node, int x) {
+        ListNode head = node;
+        ListNode tail = node;
 
         while (node != null) {
-            LinkedList.LinkedListNode next = node.next;
+            ListNode next = node.next;
             if (node.data < x) {
                 /* insert node at head */
                 node.next = head;

@@ -1,17 +1,31 @@
-package leetcode.tree;//Given a binary search tree and the lowest and highest boundaries as L and R, trim the
+package leetcode.tree;
+
+//Given a binary search tree and the lowest and highest boundaries as L and R, trim the
 //tree so that all its elements lies in [L, R] (R >= L). You might need to change the root 
 //of the tree, so the result should return the new root of the trimmed binary search tree.
 
 
+import tree.BinaryTree;
+import tree.BinaryTreeData;
+
 class TrimABinarySearchTree {
-    public TreeNode trimBST(TreeNode root, int L, int R) {
+
+    public static void main(String[] args) {
+        BinaryTree root = BinaryTreeData.getBinaryTreeRandomData();
+        BinaryTree.printTree(root);
+        TrimABinarySearchTree trimABinarySearchTree = new TrimABinarySearchTree();
+        trimABinarySearchTree.trimBST(root, 1,5);
+        BinaryTree.printTree(root);
+    }
+
+    public BinaryTree trimBST(BinaryTree root, int L, int R) {
         if(root == null) {
             return root;
         }
-        if(root.val < L) {
+        if(root.getData() < L) {
             return trimBST(root.right, L, R);
         }
-        if(root.val > R) {
+        if(root.getData() > R) {
             return trimBST(root.left, L, R);
         }
         
@@ -20,12 +34,4 @@ class TrimABinarySearchTree {
 
         return root;
     }
-    // Definition for a binary tree node.
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
-    }
-
 }

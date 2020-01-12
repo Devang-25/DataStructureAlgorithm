@@ -3,8 +3,8 @@ package tree;
 public class BinaryTreeGetLevelOfNode {
     public static void main(String[] args) {
         BinaryTree root = BinaryTreeData.getBSTData(6, 20);
-        BinaryTree.preOrder(root);
-        int level = getLevelOfNode(root, 9, 1);
+        BinaryTree.printTree(root);
+        int level = getLevelOfNode(root, 5, 0);
         System.out.println("Level of node 9 in binary tree is : " + level);
     }
 

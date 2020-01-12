@@ -1,4 +1,6 @@
-package leetcode.tree;// Invert a binary tree.
+package leetcode.tree;
+
+// Invert a binary tree.
 
 //      4
 //    /   \

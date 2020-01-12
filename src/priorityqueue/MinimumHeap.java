@@ -78,7 +78,6 @@ public class MinimumHeap<T extends  Comparable> extends Heap<T> {
     }
 
     public void printHeapArray() {
-      //  preOrder(this);
     }
 }
 

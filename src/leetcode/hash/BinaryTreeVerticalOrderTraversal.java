@@ -57,10 +57,13 @@ package leetcode.hash;
 //   [7]
 // ]
 
+import tree.BinaryTree;
+
 import java.util.*;
 
 
 public class BinaryTreeVerticalOrderTraversal {
+
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
 
@@ -106,6 +109,16 @@ public class BinaryTreeVerticalOrderTraversal {
         }
 
         return result;
+    }
+
+    public static void printVerticalOrder(BinaryTree root, Map<Integer, List<Integer>> map, int level) {
+        if (root == null) return;
+        printVerticalOrder(root.left, map, level - 1);
+        if (!map.containsKey(level)) {
+            map.put(level, new ArrayList<>());
+        }
+        map.get(level).add(root.getData());
+        printVerticalOrder(root.right, map, level + 1);
     }
 
     //Definition for a binary tree node.

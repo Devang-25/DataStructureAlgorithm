@@ -44,7 +44,6 @@ public class MaxAbsoluteDifference {
             if (ans > max)
                 max = ans;
         }
-
         return 0;
     }
 
@@ -52,6 +51,5 @@ public class MaxAbsoluteDifference {
         Arrays.sort(arr);
         return Math.abs(arr[0] - arr[arr.length-1])+Math.abs(arr.length-1);
     }
-
 
 }

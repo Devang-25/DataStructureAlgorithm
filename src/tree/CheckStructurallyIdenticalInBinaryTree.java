@@ -5,7 +5,7 @@ package tree;
  */
 public class CheckStructurallyIdenticalInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         BinaryTree binaryTree1 = new BinaryTree(99);
         System.out.println("Checking if two Binary tree is structually Identical : " + checkStructurallyBinaryTree(binaryTree, binaryTree1));
     }

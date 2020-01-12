@@ -14,11 +14,11 @@ public class LongestIncreasingSubSequence {
     private static int getLIncreasingSubseq(int[] arr) {
 
         int subSeqArr[] = new int[arr.length];
-        int actualSolution[] = new int[arr.length];
+        //int actualSolution[] = new int[arr.length];
 
         for (int i = 0; i <arr.length ; i++) {
             subSeqArr[i] = 1;
-            actualSolution[i] = i;
+           // actualSolution[i] = i;
         }
 
         for (int i = 1  ; i < arr.length; i++) {
@@ -26,7 +26,7 @@ public class LongestIncreasingSubSequence {
                 if (arr[i] > arr[j]){
                     if ((subSeqArr[j]+1) > subSeqArr[i]){
                         subSeqArr[i] = subSeqArr[j]+1;
-                        actualSolution[i] = j;
+                      //  actualSolution[i] = j;
                     }
                 }
 
@@ -39,14 +39,14 @@ public class LongestIncreasingSubSequence {
                 maxIndex = i;
         }
 
-        int t = maxIndex;
-        int newT = maxIndex;
-        do{
-            t = newT;
-            System.out.print(arr[t] + " ");
-            newT = actualSolution[t];
-        }while(t != newT);
-        System.out.println();
+//        int t = maxIndex;
+//        int newT = maxIndex;
+//        do{
+//            t = newT;
+//            System.out.print(arr[t] + " ");
+//            newT = actualSolution[t];
+//        }while(t != newT);
+//        System.out.println();
 
         return subSeqArr[maxIndex];
     }

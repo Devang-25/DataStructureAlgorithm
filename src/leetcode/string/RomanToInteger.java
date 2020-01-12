@@ -5,8 +5,14 @@ package leetcode.string;// Given a roman numeral, convert it to an integer.
 import java.util.HashMap;
 
 public class RomanToInteger {
+
+    public static void main(String[] args) {
+        RomanToInteger romanToInteger = new RomanToInteger();
+        System.out.println(romanToInteger.romanToInt("XIV"));
+    }
+
     public int romanToInt(String s) {
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> map = new HashMap<>();
         
         map.put('I', 1);
         map.put('V', 5);

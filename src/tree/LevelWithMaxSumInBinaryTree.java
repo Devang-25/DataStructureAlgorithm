@@ -8,8 +8,11 @@ import java.util.Queue;
  */
 public class LevelWithMaxSumInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+//        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getBinaryTreeRandomData();
+        BinaryTree.printTree(binaryTree);
         System.out.println("Level with max sum in Binary tree : " + maxSumLevelInBinaryTree(binaryTree));
+        System.out.println("Level with max sum in Binary tree-2 : " + maxSumLevel(binaryTree));
     }
 
     private static int maxSumLevelInBinaryTree(BinaryTree root) {
@@ -34,6 +37,28 @@ public class LevelWithMaxSumInBinaryTree {
                 if (!queue.isEmpty())
                     queue.offer(null);
             }
+        }
+        return maxSum;
+    }
+
+    private static int maxSumLevel(BinaryTree root){
+        if (root == null) return 0;
+
+        int maxSum = 0;
+        Queue<BinaryTree> q = new LinkedList<>();
+        q.offer(root);
+        while (!q.isEmpty()){
+            int count = q.size();
+            int tempSum = 0;
+            for (int i = 0; i <count; i++) {
+                BinaryTree curr = q.poll();
+                tempSum += curr.getData();
+                if (curr.getLeft() != null)
+                    q.offer(curr.left);
+                if (curr.getRight() != null)
+                    q.offer(curr.right);
+            }
+            maxSum = Math.max(maxSum, tempSum);
         }
         return maxSum;
     }

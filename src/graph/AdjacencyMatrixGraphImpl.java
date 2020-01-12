@@ -66,5 +66,4 @@ public class AdjacencyMatrixGraphImpl extends AdjacencyMatrixGraph {
     public void printVertices(List<Integer> list){
         System.out.println(list);
     }
-
 }

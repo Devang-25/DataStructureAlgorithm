@@ -20,16 +20,16 @@ class WordBreak {
             if (dictionary.contains(word.substring(i, i + 1)))
                 dp[i][i] = true;
         }
-        for (int l = 2; l <= dp.length; l++) {
-            for (int i = 0; i < dp.length - l + 1; i++) {
-                int j = i + l - 1;
-                if (dictionary.contains(word.substring(i, j + 1))) {
-                    dp[i][j] = true;
+        for (int m = 2; m <= dp.length; m++) {
+            for (int n = 0; n < dp.length - m + 1; n++) {
+                int j = n + m - 1;
+                if (dictionary.contains(word.substring(n, j + 1))) {
+                    dp[n][j] = true;
                     continue;
                 }
-                for (int k = i + 1; k <= j; k++) {
-                    if (dp[i][k - 1] && dp[k][j]) {
-                        dp[i][j] = true;
+                for (int k = n + 1; k <= j; k++) {
+                    if (dp[n][k - 1] && dp[k][j]) {
+                        dp[n][j] = true;
                         break;
                     }
                 }

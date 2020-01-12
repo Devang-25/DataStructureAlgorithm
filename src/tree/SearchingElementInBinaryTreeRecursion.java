@@ -6,7 +6,7 @@ package tree;
  */
 public class SearchingElementInBinaryTreeRecursion {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         System.out.println("Status of Searched Element in Binary Tree  is : " + searchInBinaryTree(binaryTree, 5));
     }
     public static boolean searchInBinaryTree(BinaryTree root, int data){

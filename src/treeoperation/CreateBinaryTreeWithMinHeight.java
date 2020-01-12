@@ -2,7 +2,6 @@ package treeoperation;
 
 import tree.BinaryTree;
 
-import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
@@ -11,11 +10,12 @@ import java.util.stream.IntStream;
  */
 public class CreateBinaryTreeWithMinHeight {
     public static void main(String[] args) {
-        int arr[] = IntStream.range(4, 25).toArray();
+        int arr[] = IntStream.range(3, 10).toArray();
        // Arrays.sort(arr);
         System.out.println("Creating Binary Tree with minimal height :");
         BinaryTree root = createBinaryTree(arr);
-        BinaryTree.inOrder(root);
+      //  BinaryTree.inOrder(root);
+        BinaryTree.printTree(root);
     }
 
     private static BinaryTree createBinaryTree(int[] arr) {

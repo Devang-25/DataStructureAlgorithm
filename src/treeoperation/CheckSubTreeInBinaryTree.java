@@ -9,10 +9,10 @@ import tree.BinaryTreeData;
  */
 public class CheckSubTreeInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree root1 = BinaryTreeData.getBSTData(2, 50);
+        BinaryTree root1 = BinaryTreeData.getBSTData(2, 10);
         BinaryTree root2 = BinaryTreeData.getBSTData(18, 10);
-
-        boolean check = checkSubTree(root1, root2);
+        BinaryTree.printTree(root1);
+        boolean check = checkSubTree(root1, root1);
         System.out.println("Checking if tree2 is subtree of large tree1 : " + check);
     }
 

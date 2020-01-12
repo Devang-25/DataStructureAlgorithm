@@ -8,7 +8,7 @@ import java.util.Queue;
  */
 public class DeepestNodeOfBinaryTree {
     public static void main(String[] args) {
-    BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+    BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         System.out.println("Deepest Node of Binary Tree : " + deepestNodeOfTree(binaryTree).getData());
     }
 

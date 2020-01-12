@@ -26,7 +26,13 @@ package leetcode.dp;
 // What limitation we need to add to the question to allow negative numbers?
 
 public class CombinationSumIV {
-    public int combinationSum4(int[] nums, int target) {
+
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 7};
+        System.out.println(combinationSum4(arr, 8));
+    }
+
+    private static int combinationSum4(int[] nums, int target) {
         int[] dp = new int[target + 1];
         dp[0] = 1;
 
@@ -37,7 +43,6 @@ public class CombinationSumIV {
                 }
             }
         }
-
         return dp[target];
     }
 }

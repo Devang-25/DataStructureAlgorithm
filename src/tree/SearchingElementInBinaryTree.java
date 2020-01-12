@@ -9,7 +9,7 @@ import java.util.Queue;
  */
 public class SearchingElementInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         System.out.println("Searched Status : " + searchDataInBinaryTree(binaryTree, 79));
 
     }

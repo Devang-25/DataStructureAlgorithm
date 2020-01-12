@@ -6,7 +6,8 @@ package tree;
  */
 public class PrintRootToLeafPaths {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
+        BinaryTree.printTree(binaryTree);
         printPaths(binaryTree);
     }
 
@@ -24,7 +25,7 @@ public class PrintRootToLeafPaths {
 
         if (root.getLeft() == null && root.getRight() == null ) {
             printArray(path, pathLen);
-        }else {
+        } else {
             printPaths(root.getLeft(), path, pathLen);
             printPaths(root.getRight(), path, pathLen);
         }

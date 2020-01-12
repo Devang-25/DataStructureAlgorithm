@@ -3,14 +3,14 @@ package string;
 
 //Implement an algorithm to find the kth to last element of a single linked list
 
-import linkedlist.LinkedList;
+import linkedlist.ListNode;
 
 public class NthToLast {
-    LinkedList.LinkedListNode nthToLast(LinkedList.LinkedListNode head, int k) {
+    ListNode nthToLast(ListNode head, int k) {
         if (k <= 0) return null;
 
-        LinkedList.LinkedListNode p1 = head;
-        LinkedList.LinkedListNode p2 = head;
+        ListNode p1 = head;
+        ListNode p2 = head;
 
         //move p2 forward k nodes into the list
         for (int i = 0; i < k - 1; i++) {
@@ -26,7 +26,6 @@ public class NthToLast {
             p1 = p1.getNext();
             p2 = p2.getNext();
         }
-
         return p1;
     }
 }

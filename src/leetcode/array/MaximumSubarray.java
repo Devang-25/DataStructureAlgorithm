@@ -7,7 +7,14 @@ package leetcode.array;
 
 public class MaximumSubarray {
 
-    public int maxSubArray(int[] nums) {
+    public static void main(String[] args) {
+        int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        int ar[] = {-1};
+        System.out.println(maxSubArray(ar));
+        System.out.println(maxSubArraySum(arr));
+    }
+
+    public static int maxSubArray(int[] nums) {
         int[] dp = new int[nums.length];
 
         dp[0] = nums[0];
@@ -18,5 +25,19 @@ public class MaximumSubarray {
             max = Math.max(dp[i], max);
         }
         return max;
+    }
+
+    public static int maxSubArraySum(int[] arr) {
+        if (arr.length == 0)
+            return 0;
+        if (arr.length == 1)
+            return arr[0];
+
+        int finalMax = arr[0], tempMax = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            tempMax = Math.max(arr[i], tempMax + arr[i]);
+            finalMax = Math.max(tempMax, finalMax);
+        }
+        return finalMax;
     }
 }

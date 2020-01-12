@@ -8,12 +8,11 @@ import java.util.Queue;
  */
 public class MaxElementInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         System.out.println(maxDataInBinaryTree(binaryTree));
     }
 
     private static int maxDataInBinaryTree(BinaryTree root) {
-
         if (root == null )
             return Integer.MIN_VALUE;
 

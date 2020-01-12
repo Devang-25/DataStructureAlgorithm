@@ -1,16 +1,14 @@
 package linkedlist;
 
 //Implement a function to check if a linked list is a palindrome
-//don't forget import statements!
-
 import java.util.Stack;
 
 public class IsPalindrome {
-    boolean isPalindrome(LinkedList.LinkedListNode head) {
-        LinkedList.LinkedListNode fast = head;
-        LinkedList.LinkedListNode slow = head;
+    boolean isPalindrome(ListNode head) {
+        ListNode fast = head;
+        ListNode slow = head;
 
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
 
         /* push elements from first half of linked list onto stack.
          * When fast runner (which is moving at 2x speed) reaches the
@@ -27,7 +25,7 @@ public class IsPalindrome {
         }
 
         while (slow != null) {
-            int top = stack.pop().intValue();
+            int top = stack.pop();
 
             /* if values are different, then it's not a palindrome */
             if (top != slow.data) {

@@ -11,19 +11,21 @@ public class MaximumProductSubarray {
             return 0;
         }
 
-        int result = nums[0];
-        int max = nums[0];
-        int min = nums[0];
+        int ans, max, min;
+        ans = min = max = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
-            int temp = max;
-            max = Math.max(Math.max(nums[i] * max, nums[i] * min), nums[i]);
-            min = Math.min(Math.min(nums[i] * temp, nums[i] * min), nums[i]);
 
-            if (max > result) {
-                result = max;
+            int tempMax = nums[i] * max;
+            int tempMin = nums[i] * min;
+
+            max = Math.max(Math.max(tempMax, tempMin), nums[i]);
+            min = Math.min(Math.min(tempMax, tempMin), nums[i]);
+
+            if (max > ans) {
+                ans = max;
             }
         }
-        return result;
+        return ans;
     }
 }

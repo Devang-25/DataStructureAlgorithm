@@ -5,11 +5,15 @@ package leetcode.bitmanipulation;
 // Given a = 1 and b = 2, return 3.
 
 public class SumOfTwoIntegers {
+
+    public static void main(String[] args) {
+        System.out.println(new SumOfTwoIntegers().getSum(2,3));
+    }
+
     public int getSum(int a, int b) {
         if (a == 0) {
             return b;
         }
-
         if (b == 0) {
             return a;
         }
@@ -19,11 +23,6 @@ public class SumOfTwoIntegers {
             a = a ^ b;
             b = carry << 1;
         }
-
         return a;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new SumOfTwoIntegers().getSum(3,8));
     }
 }

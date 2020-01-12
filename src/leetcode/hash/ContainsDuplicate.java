@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 class ContainsDuplicate {
     public boolean containsDuplicate(int[] nums) {
-        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for(int i: nums) {
             if(map.containsKey(i)) {
                 return true;
@@ -15,7 +15,6 @@ class ContainsDuplicate {
                 map.put(i, 1);
             }
         }
-        
         return false;
     }
 }

@@ -21,6 +21,17 @@ package leetcode.dfs;
 public class NumberOfIslands {
     char[][] gridCopy;
 
+    public static void main(String[] args) {
+        NumberOfIslands ofIslands = new NumberOfIslands();
+        char[][] board = {
+                {'1', '1', '0', '0', '0'},
+                {'1', '1', '0', '0', '0'},
+                {'0', '0', '1', '0', '0'},
+                {'0', '0', '0', '1', '1'},
+        };
+        System.out.println(ofIslands.numIslands(board));
+    }
+
     public int numIslands(char[][] grid) {
         //set grid copy to the current grid
         gridCopy = grid;

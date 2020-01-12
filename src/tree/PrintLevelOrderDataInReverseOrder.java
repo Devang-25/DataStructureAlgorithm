@@ -10,7 +10,8 @@ import java.util.Stack;
  */
 public class PrintLevelOrderDataInReverseOrder {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
+        BinaryTree.printTree(binaryTree);
         printInReverseOrder(binaryTree);
     }
 
@@ -29,7 +30,6 @@ public class PrintLevelOrderDataInReverseOrder {
             stack.push(tmp);
         }
         while (!stack.isEmpty())
-            System.out.println(stack.pop().getData() + " ");
-
+            System.out.print(stack.pop().getData() + " ");
     }
 }

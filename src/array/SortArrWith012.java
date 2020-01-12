@@ -3,22 +3,14 @@ package array;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class SortArrWith012 {
     public static void main(String[] args) {
-        InputReader sc = new InputReader();
-     //   int t = sc.nextInt();
-     //   for (int i = 0; i < t; i++) {
-     //       int n = sc.nextInt();
-
         int arr[] = {0, 2,0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 2};
 
-//             new int[n];
-//            for (int j = 0; j < n; j++) {
-//                arr[j] = sc.nextInt();
-//            }
             System.out.println("Before sorting : " + Arrays.toString(arr));
             //sortArrWith012(arr);
             sortArrWith012WithoutCount(arr);
@@ -51,6 +43,34 @@ public class SortArrWith012 {
                 }
             }
         }
+    }
+
+    private static ArrayList<Integer> sortArrWith012WithoutCount(ArrayList<Integer> list) {
+        int low = 0, high = list.size() - 1, mid = 0, temp = 0;
+        while (mid <= high) {
+            switch (list.get(mid)) {
+                case 0: {
+                    temp = list.get(low);
+                    list.set(low, list.get(mid));
+                    list.set(mid, temp);
+                    low++;
+                    mid++;
+                    break;
+                }
+                case 1: {
+                    mid++;
+                    break;
+                }
+                case 2: {
+                    temp = list.get(mid);
+                    list.set(mid, list.get(high));
+                    list.set(high, temp);
+                    high--;
+                    break;
+                }
+            }
+        }
+        return list;
     }
 
     private static void sortArrWith012(int[] arr) {

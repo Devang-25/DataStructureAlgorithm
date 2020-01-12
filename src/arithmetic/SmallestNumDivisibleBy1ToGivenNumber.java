@@ -35,7 +35,7 @@ public class SmallestNumDivisibleBy1ToGivenNumber {
         return lcm;
     }
 
-    static long gcd(long a, long b) {
+    private static long gcd(long a, long b) {
         while (b > 0) {
             a %= b;
             if (a == 0) return b;

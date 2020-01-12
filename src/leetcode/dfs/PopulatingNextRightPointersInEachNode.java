@@ -75,5 +75,4 @@ public class PopulatingNextRightPointersInEachNode {
             val = x;
         }
     }
-
 }

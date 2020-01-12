@@ -4,6 +4,11 @@ package leetcode.binarysearch;
 // Compute and return the square root of x.
 
 public class SquareRootX {
+    public static void main(String[] args) {
+        SquareRootX squareRootX = new SquareRootX();
+        System.out.println(squareRootX.mySqrt(0));
+    }
+
     public int mySqrt(int x) {
         if (x == 0) {
             return 0;

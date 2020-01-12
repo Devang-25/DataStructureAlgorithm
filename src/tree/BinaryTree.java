@@ -1,12 +1,22 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Stack;
+import com.sun.istack.internal.NotNull;
+
+import java.util.*;
 
 /**
  * Created by rakeshgupta on 7/9/17.
+ public ArrayList<Integer> inorderTraversal(TreeNode A) {
+ ArrayList<Integer> ans = new ArrayList<>();
+ inOrder(A, ans);
+ return ans;
+ }
+ public void inOrder(TreeNode root, ArrayList<Integer> arr){
+ if(root == null) return;
+ inOrder(root.left, arr);
+ arr.add(root.val);
+ inOrder(root.right, arr);
+ }
  */
 public class BinaryTree {
     public BinaryTree left;
@@ -99,6 +109,55 @@ public class BinaryTree {
         inOrder(root.right);
     }
 
+    public static void addNodeInBinaryTree(BinaryTree root, int data){
+        if (root == null) {
+            root = new BinaryTree(data);
+            return;
+        }
+
+        Queue<BinaryTree> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()){
+            BinaryTree curr = q.poll();
+            if (curr.getLeft() != null && curr.getRight() != null){
+                q.add(curr.getLeft());
+                q.add(curr.getRight());
+            }else {
+                if (curr.getLeft() == null){
+                    curr.setLeft(new BinaryTree(data));
+                }else {
+                    curr.setRight(new BinaryTree(data));
+                }
+                break;
+            }
+        }
+    }
+
+    public static BinaryTree addNodeInBinarySearchTree(BinaryTree root, int data){
+        if (root == null){
+            return new BinaryTree(data);
+        }
+        if (data > root.getData()){
+            root.setRight(addNodeInBinarySearchTree(root.getRight(), data));
+        }else {
+            root.setLeft(addNodeInBinarySearchTree(root.getLeft(), data));
+        }
+        return root;
+    }
+
+    public static boolean searchNodeInBinarySearchTree(BinaryTree root, int data){
+        if (root == null)
+            return false;
+
+        if (root.getData() == data)
+            return true;
+
+        if (root.getData() < data){
+            return searchNodeInBinarySearchTree(root.getRight(), data);
+        }
+        return searchNodeInBinarySearchTree(root.getLeft(), data);
+    }
+
     public static void add(BinaryTree root, int data) {
         BinaryTree node = new BinaryTree(data);
         if (root == null)
@@ -155,12 +214,10 @@ public class BinaryTree {
     }
 
     public static void printTree(BinaryTree root) {
-        BTreePrinter bTreePrinter = new BTreePrinter();
-        bTreePrinter.printNode(root);
+        BTreePrinter.printNode(root);
     }
 
     public BinaryTree getLeft() {
-
         return left;
     }
 
@@ -188,7 +245,6 @@ public class BinaryTree {
 
         public static <T extends Comparable<?>> void printNode(BinaryTree root) {
             int maxLevel = BTreePrinter.maxLevel(root);
-
             printNodeInternal(Collections.singletonList(root), 1, maxLevel);
         }
 
@@ -255,11 +311,10 @@ public class BinaryTree {
         private static <T extends Comparable<?>> int maxLevel(BinaryTree node) {
             if (node == null)
                 return 0;
-
-            return Math.max(BTreePrinter.maxLevel(node.left), BTreePrinter.maxLevel(node.right)) + 1;
+            return Math.max(maxLevel(node.left), maxLevel(node.right)) + 1;
         }
 
-        private static <T> boolean isAllElementsNull(List<T> list) {
+        private static <T> boolean isAllElementsNull(@NotNull List<T> list) {
             for (Object object : list) {
                 if (object != null)
                     return false;

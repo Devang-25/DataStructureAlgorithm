@@ -9,7 +9,8 @@ import java.util.Queue;
  */
 public class SizeOfBinaryTree {
     public static void main(String[] args) {
-    BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+    BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
+    BinaryTree.printTree(binaryTree);
         System.out.println("Size of Tree : " + sizeOfTree(binaryTree));
     }
 

@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public class ConvertBinaryTreeToBST {
     public static void main(String[] args) {
-        BinaryTree root = BinaryTreeData.GetPopulatedData();
+        BinaryTree root = BinaryTreeData.getPopulatedData();
         System.out.println("Binary Tree traversal :  ");
         BinaryTree.inOrder(root);
         System.out.println("\nBinary Search tree traversal of Binary Tree after conversion from Binary Tree to BST:  ");

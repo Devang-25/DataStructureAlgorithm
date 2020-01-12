@@ -5,8 +5,9 @@ package tree;
  */
 public class HasPathWithGivenSumInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
-        System.out.println("BinaryTree has path of 10 : " + hasPathSum(binaryTree, 10));
+        BinaryTree root = BinaryTreeData.getPopulatedData();
+        BinaryTree.printTree(root);
+        System.out.println("BinaryTree has path of  8 : " + hasPathSum(root, 8));
     }
 
     private static boolean hasPathSum(BinaryTree root, int sum) {
@@ -15,8 +16,6 @@ public class HasPathWithGivenSumInBinaryTree {
 
         if (root.left == null && root.right == null && root.data == sum)
             return true;
-        else
-            return hasPathSum(root.left, sum-root.getData()) || hasPathSum(root.right, sum-root.getData());
-
+        return hasPathSum(root.left, sum-root.getData()) || hasPathSum(root.right, sum-root.getData());
     }
 }

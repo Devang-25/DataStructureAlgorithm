@@ -23,7 +23,6 @@ public class SmallestMissing {
         if (array[mid] == mid) {
             return findFirstMissing(array, mid + 1, end);
         }
-
         return findFirstMissing(array, start, mid);
     }
 }

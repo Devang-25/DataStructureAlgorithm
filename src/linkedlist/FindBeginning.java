@@ -5,9 +5,9 @@ package linkedlist;
 //the node at the beginning of the loop
 
 public class FindBeginning {
-    LinkedList.LinkedListNode findBeginning(LinkedList.LinkedListNode head) {
-        LinkedList.LinkedListNode slow = head;
-        LinkedList.LinkedListNode fast = head;
+    ListNode findBeginning(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
 
         /* find meeting point. This will be LOOP_SIZE - k
          * steps int othe linked list */

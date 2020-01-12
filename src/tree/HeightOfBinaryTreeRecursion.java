@@ -6,7 +6,8 @@ package tree;
  */
 public class HeightOfBinaryTreeRecursion {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
+        BinaryTree.printTree(binaryTree);
         System.out.println("Height of Binary Tree : " + heightOfBinaryTree(binaryTree));
     }
 
@@ -16,7 +17,6 @@ public class HeightOfBinaryTreeRecursion {
 
         int leftHeight = heightOfBinaryTree(root.left);
         int rightHeight = heightOfBinaryTree(root.right);
-        return (leftHeight > rightHeight) ? leftHeight+1 : rightHeight+1;
-
+        return Math.max(leftHeight, rightHeight) + 1;
     }
 }

@@ -4,6 +4,8 @@ package leetcode.dfs;
 // The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 
+import tree.model.TreeNode;
+
 public class MaximumDepthOfABinaryTree {
     public int maxDepth(TreeNode root) {
         if (root == null) {
@@ -12,16 +14,4 @@ public class MaximumDepthOfABinaryTree {
 
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
-
-    // Definition for a binary tree node.
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
 }

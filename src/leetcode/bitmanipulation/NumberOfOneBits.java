@@ -4,19 +4,21 @@ package leetcode.bitmanipulation;
 // For example, the 32-bit integer ’11' has binary representation 00000000000000000000000000001011, so the function should return 3.
 
 public class NumberOfOneBits {
+
+    public static void main(String[] args) {
+        System.out.println(hammingWeight(-10));
+    }
+
     // you need to treat n as an unsigned value
-    public int hammingWeight(int n) {
+    public static int hammingWeight(int n) {
         if(n == 0) {
             return 0;
         }
-        
         int count = 0;
-        
         while(n != 0) {
             count += (n) & 1;
             n >>>= 1;
         }
-        
         return count;
     }
 }

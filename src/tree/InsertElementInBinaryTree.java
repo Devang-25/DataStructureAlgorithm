@@ -5,8 +5,10 @@ package tree;
  */
 public class InsertElementInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
+        BinaryTree.printTree(binaryTree);
         BinaryTree b = insertNodeInBinaryTree(binaryTree, 25);
+        BinaryTree.printTree(binaryTree);
         //Verify inserted element in tree
         System.out.println(SearchingElementInBinaryTreeRecursion.searchInBinaryTree(b, 25));
     }

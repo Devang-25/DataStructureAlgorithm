@@ -20,49 +20,46 @@ public class CoinChange {
 
     public static void main(String[] args) {
         int coins[] = {1, 2, 5, 7};
-        System.out.println(coinChange(coins, 6));
-        System.out.println(count(coins, coins.length, 6));
+        System.out.println(minCoinDP(coins, coins.length, 13));
+        System.out.println(minCoin(coins, coins.length, 13));
+
     }
 
-    private static int count(int S[], int m, int n) {
-        if (n == 0) return 1;
+    public static int minCoin(int[] coins, int n, int val) {
+        if (val == 0) return 0;
 
-        if (n < 0) return 0;
+        int res = Integer.MAX_VALUE;
 
-        if (m <= 0 && n >= 1) return 0;
-
-        // count is sum of solutions (i)
-        // including S[m-1] (ii) excluding S[m-1]
-        return count(S, m - 1, n) + count(S, m, n - S[m - 1]);
-    }
-
-    private static int coinChange(int[] coins, int amount) {
-        if (amount < 1) {
-            return 0;
-        }
-        return coinChangeRecursive(coins, amount, new int[amount]);
-    }
-
-    private static int coinChangeRecursive(int[] coins, int amount, int[] dp) {
-        if (amount < 0) {
-            return -1;
-        }
-        if (amount == 0) {
-            return 0;
-        }
-        if (dp[amount - 1] != 0) {
-            return dp[amount - 1];
-        }
-
-        int min = Integer.MAX_VALUE;
-        for (int coin : coins) {
-            int result = coinChangeRecursive(coins, amount - coin, dp);
-            if (result >= 0 && result < min) {
-                min = 1 + result;
+        for (int i = 0; i < n; i++) {
+            if (coins[i] <= val) {
+                int sub_res = minCoin(coins, n, val - coins[i]);
+                if (sub_res != Integer.MAX_VALUE)
+                    res = Math.min(sub_res + 1, res);
             }
         }
+        return res;
+    }
 
-        dp[amount - 1] = (min == Integer.MAX_VALUE) ? -1 : min;
-        return dp[amount - 1];
+    public static int minCoinDP(int[] coins, int n, int val) {
+        if (val == 0) return 0;
+
+        int dp[] = new int[val + 1];
+        dp[0] = 0;
+
+        for (int i = 1; i <= val; i++) {
+            dp[i] = Integer.MAX_VALUE;
+        }
+
+        for (int i = 1; i <= val; i++) {
+            for (int j = 0; j < n; j++) {
+                if (coins[j] <= i) {
+                    int sub_res = dp[i - coins[j]];
+                    if (sub_res != Integer.MAX_VALUE)
+                        dp[i] = Math.min(sub_res + 1, dp[i]);
+                }
+            }
+        }
+        // if no coins matches then return Integer.MAX_VALUE or -1
+        return dp[val];
     }
 }

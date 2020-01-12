@@ -1,13 +1,13 @@
 package javaexamples;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.sql.Timestamp;
+import java.util.Date;
 
 public class Test {
     public static void main(String[] args) {
-        Map<String, Integer> map = new HashMap();
-        map.put(null, 10);
-        System.out.println(map);
-        System.out.println(map.get(null));
+        Timestamp timestamp = new Timestamp(new Date().getTime());
+        //Timestamp timestamp = new Timestamp(new Date().setDate(10)//);
+        System.out.println(timestamp);
     }
 }
+

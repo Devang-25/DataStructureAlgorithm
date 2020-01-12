@@ -1,5 +1,9 @@
 package tree;
 
+import leetcode.hash.BinaryTreeVerticalOrderTraversal;
+
+import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class BinaryTreeVerticalSum {
@@ -7,22 +11,26 @@ public class BinaryTreeVerticalSum {
 
     public static void main(String[] args) {
         BinaryTree binaryTree = BinaryTreeData.getRandomPopulatedData();
-        BinaryTree.preOrder(binaryTree);
+        BinaryTree.printTree(binaryTree);
+        System.out.println();
         printVerticalSumOfBinaryTree(binaryTree, map, 0);
         System.out.println(map);
+        Map<Integer, List<Integer>> mm = new TreeMap<>();
+        BinaryTreeVerticalOrderTraversal.printVerticalOrder(binaryTree, mm, 0);
+        System.out.println(mm);
     }
 
-    private static void printVerticalSumOfBinaryTree(BinaryTree binaryTree, TreeMap<Integer, Integer> treeMap, int level) {
-        if (binaryTree == null)
+    private static void printVerticalSumOfBinaryTree(BinaryTree root, TreeMap<Integer, Integer> treeMap, int level) {
+        if (root == null)
             return;
 
-        printVerticalSumOfBinaryTree(binaryTree.left, treeMap, level - 1);
+        printVerticalSumOfBinaryTree(root.left, treeMap, level - 1);
         if (treeMap.get(level) != null) {
-            Integer data = treeMap.get(level) + binaryTree.data;
+            Integer data = treeMap.get(level) + root.data;
             treeMap.put(level, data);
         } else {
-            treeMap.put(level, binaryTree.data);
+            treeMap.put(level, root.data);
         }
-        printVerticalSumOfBinaryTree(binaryTree.right, treeMap, level + 1);
+        printVerticalSumOfBinaryTree(root.right, treeMap, level + 1);
     }
 }

@@ -1,11 +1,7 @@
 
 package linkedlist;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static linkedlist.LinkedList.printLinkedList;
-
 
 /**
  * Created by : Rakesh Gupta on 8/26/17
@@ -14,7 +10,7 @@ import static linkedlist.LinkedList.printLinkedList;
 
 public class DetectCycleInLinkedList {
     public static void main(String[] args) {
-    LinkedList.LinkedListNode headN = getPopulatedData(8);
+        ListNode headN = getPopulatedData(8);
 
         boolean status = hasCycle(headN);
         System.out.println("LinkedList is : ");
@@ -25,9 +21,9 @@ public class DetectCycleInLinkedList {
         printLinkedList(headN);
     }
 
-    private static void detectCycleAndRemove(LinkedList.LinkedListNode headN) {
-        LinkedList.LinkedListNode slow = headN;
-        LinkedList.LinkedListNode fast = headN;
+    private static void detectCycleAndRemove(ListNode headN) {
+        ListNode slow = headN;
+        ListNode fast = headN;
 
         while (slow != null && fast != null && fast.next != null){
             slow = slow.next;
@@ -40,9 +36,9 @@ public class DetectCycleInLinkedList {
         return;
     }
 
-    private static void removeNode(LinkedList.LinkedListNode slow, LinkedList.LinkedListNode headNode) {
-        LinkedList.LinkedListNode ptr1 = null;
-        LinkedList.LinkedListNode ptr2 = null;
+    private static void removeNode(ListNode slow, ListNode headNode) {
+        ListNode ptr1 = null;
+        ListNode ptr2 = null;
 
         ptr1 = headNode;
         while (true){
@@ -58,9 +54,9 @@ public class DetectCycleInLinkedList {
         ptr2.next = null;
     }
 
-    private static void removeLoop(LinkedList.LinkedListNode loop, LinkedList.LinkedListNode head) {
-        LinkedList.LinkedListNode ptr1 = loop;
-        LinkedList.LinkedListNode ptr2 = loop;
+    private static void removeLoop(ListNode loop, ListNode head) {
+        ListNode ptr1 = loop;
+        ListNode ptr2 = loop;
 
         int k = 1, i;
         while (ptr1.next != ptr2) {
@@ -87,14 +83,14 @@ public class DetectCycleInLinkedList {
         ptr2.next = null;
     }
 
-    private static void detectAndRemoveLoop(LinkedList.LinkedListNode node) {
+    private static void detectAndRemoveLoop(ListNode node) {
 
         // If list is empty or has only one node
         // without loop
         if (node == null || node.next == null)
             return;
 
-        LinkedList.LinkedListNode slow = node, fast = node;
+        ListNode slow = node, fast = node;
 
         // Move slow and fast 1 and 2 steps
         // ahead respectively.
@@ -123,9 +119,9 @@ public class DetectCycleInLinkedList {
         }
     }
 
-    private static boolean hasCycle(LinkedList.LinkedListNode headN) {
-        LinkedList.LinkedListNode slow = headN;
-        LinkedList.LinkedListNode fast = headN;
+    private static boolean hasCycle(ListNode headN) {
+        ListNode slow = headN;
+        ListNode fast = headN;
 
         while (slow != null && fast != null && fast.next != null){
             slow = slow.next;
@@ -136,18 +132,40 @@ public class DetectCycleInLinkedList {
         return false;
     }
 
-    public static LinkedList.LinkedListNode getPopulatedData(int head){
-        LinkedList.LinkedListNode headNode = new LinkedList.LinkedListNode(head);
-        headNode.next = new LinkedList.LinkedListNode(1);
-        headNode.next.next = new LinkedList.LinkedListNode(9);
-        headNode.next.next.next = new LinkedList.LinkedListNode(4);
-        LinkedList.LinkedListNode s = new LinkedList.LinkedListNode(2);
+    public static ListNode getPopulatedData(int head) {
+        ListNode headNode = new ListNode(head);
+        headNode.next = new ListNode(1);
+        headNode.next.next = new ListNode(9);
+        headNode.next.next.next = new ListNode(4);
+        ListNode s = new ListNode(2);
         headNode.next.next.next.next = s;
-        headNode.next.next.next.next.next = new LinkedList.LinkedListNode(3);
-        headNode.next.next.next.next.next.next = new LinkedList.LinkedListNode(7);
-        headNode.next.next.next.next.next.next.next = new LinkedList.LinkedListNode(2);
-        headNode.next.next.next.next.next.next.next.next = new LinkedList.LinkedListNode(9);
+        headNode.next.next.next.next.next = new ListNode(3);
+        headNode.next.next.next.next.next.next = new ListNode(7);
+        headNode.next.next.next.next.next.next.next = new ListNode(2);
+        headNode.next.next.next.next.next.next.next.next = new ListNode(9);
         headNode.next.next.next.next.next.next.next.next.next =  s;
         return headNode;
+    }
+
+    public ListNode detectCycle(ListNode listNode) {
+        ListNode slow = listNode;
+        ListNode fast = listNode;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                break;
+            }
+        }
+        if (fast == null || fast.next == null)
+            return null;
+
+        slow = listNode;
+        while (slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;
     }
 }

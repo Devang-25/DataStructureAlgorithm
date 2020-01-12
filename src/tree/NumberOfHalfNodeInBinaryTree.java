@@ -9,7 +9,7 @@ import java.util.Queue;
  */
 public class NumberOfHalfNodeInBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         System.out.println("Number of Half Node in BinaryTree : " + numberOfHalfNodeInBinaryTree(binaryTree));
     }
 

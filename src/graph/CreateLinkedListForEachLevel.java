@@ -9,9 +9,9 @@ import java.util.LinkedList;
 
 public class CreateLinkedListForEachLevel {
     ArrayList<LinkedList<TreeNode>> createLinkedList(TreeNode root) {
-        ArrayList<LinkedList<TreeNode>> result = new ArrayList<LinkedList<TreeNode>>();
+        ArrayList<LinkedList<TreeNode>> result = new ArrayList<>();
         /* "visit" the root */
-        LinkedList<TreeNode> current = new LinkedList<TreeNode>();
+        LinkedList<TreeNode> current = new LinkedList<>();
         if (root != null) {
             current.add(root);
         }
@@ -19,7 +19,7 @@ public class CreateLinkedListForEachLevel {
         while (current.size() > 0) {
             result.add(current); //add previous level
             LinkedList<TreeNode> parents = current; //go to next level
-            current = new LinkedList<TreeNode>();
+            current = new LinkedList<>();
             for (TreeNode parent : parents) {
                 /* visit the children */
                 if (parent.left != null) {

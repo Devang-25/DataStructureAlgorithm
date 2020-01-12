@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Arrays;
+
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 
@@ -7,6 +9,7 @@ public class MaximumProductSubarray {
 
     public static void main(String[] args) {
         int arr[] = {1, -2, -3, 0, 7, -8, -2};
+        System.out.println(Arrays.toString(arr));
         System.out.println("Maximum Sub array product is " + maxSubarrayProduct(arr));
     }
 

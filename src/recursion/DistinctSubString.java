@@ -50,9 +50,7 @@ public class DistinctSubString {
                         }
                     }
                 }
-
             }
-
             start = j;
         }
         System.out.println("Substrings are " + N

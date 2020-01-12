@@ -5,6 +5,8 @@ package leetcode.dfs;
 // Two binary trees are considered equal if they are structurally identical and the nodes have the same value.
 
 
+import tree.model.TreeNode;
+
 public class SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
@@ -21,16 +23,4 @@ public class SameTree {
 
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
-
-    //Definition for a binary tree node.
-    class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
 }

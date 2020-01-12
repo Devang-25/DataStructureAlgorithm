@@ -9,7 +9,8 @@ import java.util.List;
 
 public class PrintPathTree {
     public static void main(String[] args) {
-        BinaryTree root = BinaryTreeData.getRandomPopulatedData();
+        BinaryTree root = BinaryTreeData.getBinaryTreeRandomData();
+        BinaryTree.printTree(root);
         printPath(root, new ArrayList<>());
     }
 
@@ -22,7 +23,6 @@ public class PrintPathTree {
             print(integers);
         }
         printPath(root.left, addNum(integers, root.getData()));
-
         printPath(root.right, addNum(integers, root.getData()));
     }
 

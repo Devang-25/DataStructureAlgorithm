@@ -13,8 +13,8 @@ import java.util.Queue;
  */
 public class PrintBinaryTreeTopView {
     public static void main(String[] args) {
-        BinaryTree root = BinaryTreeData.getBSTData(5, 50);
-
+        BinaryTree root = BinaryTreeData.getBinaryTreeRandomData();
+        BinaryTree.printTree(root);
         System.out.println("Binary Tree Top View is : ");
         new PrintBinaryTreeTopView().printTopView(root);
     }
@@ -42,7 +42,6 @@ public class PrintBinaryTreeTopView {
             if (n.right != null)
                 qItems.add(new QItem(n.right, hd+1));
         }
-
     }
 
     class QItem {

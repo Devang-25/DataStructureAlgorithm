@@ -1,5 +1,7 @@
-package leetcode.tree;// Given a binary tree, return all root-to-leaf paths.
+package leetcode.tree;
 
+
+// Given a binary tree, return all root-to-leaf paths.
 // For example, given the following binary tree:
 
 //    1
@@ -13,7 +15,6 @@ package leetcode.tree;// Given a binary tree, return all root-to-leaf paths.
 
 import java.util.ArrayList;
 import java.util.List;
-
 
 public class BinaryTreePaths {
     public List<String> binaryTreePaths(TreeNode root) {

@@ -5,7 +5,7 @@ package tree;
  */
 public class WidthOfBinaryTree {
     public static void main(String[] args) {
-        BinaryTree binaryTree = BinaryTreeData.GetPopulatedData();
+        BinaryTree binaryTree = BinaryTreeData.getPopulatedData();
         System.out.println("Width of Binary Tree : " + widthOfBinaryTree(binaryTree));
     }
 
@@ -20,13 +20,9 @@ public class WidthOfBinaryTree {
         return max;
         }
 
-        public static int widthOfBinaryTree(BinaryTree root, int depth){
-        if (root == null)
-            return 0;
-        else
-            if (depth == 0)
-                return 1;
-            else
-                return widthOfBinaryTree(root.left, depth+1)+ widthOfBinaryTree(root.right, depth-1);
-        }
+    public static int widthOfBinaryTree(BinaryTree root, int depth) {
+        if (root == null) return 0;
+        if (depth == 0) return 1;
+        return widthOfBinaryTree(root.left, depth + 1) + widthOfBinaryTree(root.right, depth - 1);
+    }
 }

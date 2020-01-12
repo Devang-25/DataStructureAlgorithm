@@ -1,16 +1,13 @@
 package binarysearchtree;
 
-import tree.binarytree.BinaryTree;
-
-import static tree.binarytree.BinaryTree.inOrder;
-
 /**
  * Created by rakeshgupta on 10/19/16.
  */
 public class BSTProblems {
 
     public static void main(String[] args) {
-        BinaryTree.Node bSTRoot = BinarySearchTree.getBSTDataPopulatedTree();
+
+        Node bSTRoot = null;//BinarySearchTree.getBSTDataPopulatedTree();
 
         System.out.println();
         System.out.println("*******Finding minimum in Binary Search Tree*********");
@@ -25,8 +22,6 @@ public class BSTProblems {
         System.out.println();
         System.out.println("**********Mirror a BST********");
         mirrorBST(bSTRoot);
-        System.out.println("BST after mirroring tree: ");
-        inOrder(bSTRoot);
         System.out.println();
         System.out.println("***Counting number of Structurally Unique possible tree***");
         System.out.println(countTrees(3));
@@ -42,7 +37,7 @@ public class BSTProblems {
     }
 
 
-    private static boolean isBinarySearchTree(BinaryTree.Node root, int min, int max) {
+    private static boolean isBinarySearchTree(Node root, int min, int max) {
         if (root == null)
             return true;
 
@@ -53,7 +48,7 @@ public class BSTProblems {
                 && isBinarySearchTree(root.getRightChild(), ((int) root.getData()), max);
     }
 
-    private static void printRange(BinaryTree.Node root, int low, int high) {
+    private static void printRange(Node root, int low, int high) {
         if (root == null)
             return;
         if (low <= (int) root.getData())
@@ -79,19 +74,19 @@ public class BSTProblems {
         return sum;
     }
 
-    private static void mirrorBST(BinaryTree.Node bSTRoot) {
+    private static void mirrorBST(Node bSTRoot) {
         if (bSTRoot == null)
             return;
 
         mirrorBST(bSTRoot.getLeftChild());
         mirrorBST(bSTRoot.getRightChild());
 
-        BinaryTree.Node temp = bSTRoot.getLeftChild();
+        Node temp = bSTRoot.getLeftChild();
         bSTRoot.setLeftChild(bSTRoot.getRightChild());
         bSTRoot.setRightChild(temp);
     }
 
-    private static int depthOfBST(BinaryTree.Node bSTRoot) {
+    private static int depthOfBST(Node bSTRoot) {
         if (bSTRoot == null)
             return 0;
         int leftMaxDepth = 1 + depthOfBST(bSTRoot.getLeftChild());
@@ -100,7 +95,7 @@ public class BSTProblems {
         return Math.max(leftMaxDepth, rightMaxDepth);
     }
 
-    public static int minValue(BinaryTree.Node root) {
+    public static int minValue(Node root) {
         if (root == null)
             return -1;
 
@@ -108,5 +103,42 @@ public class BSTProblems {
             return ((int) root.getData());
 
         return minValue(root.getLeftChild());
+    }
+
+    static class Node {
+        int data;
+        Node leftChild;
+        Node rightChild;
+
+        public Node() {
+        }
+
+        public Node(int data) {
+            this.data = data;
+        }
+
+        public int getData() {
+            return data;
+        }
+
+        public void setData(int data) {
+            this.data = data;
+        }
+
+        public Node getLeftChild() {
+            return leftChild;
+        }
+
+        public void setLeftChild(Node leftChild) {
+            this.leftChild = leftChild;
+        }
+
+        public Node getRightChild() {
+            return rightChild;
+        }
+
+        public void setRightChild(Node rightChild) {
+            this.rightChild = rightChild;
+        }
     }
 }

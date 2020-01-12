@@ -6,27 +6,27 @@ package linkedlist;
 public class LinkedList {
 
     public static void main(String[] args) {
-        LinkedListNode linkedListNode = new LinkedListNode(5);
-        LinkedListNode linkedListNode1 = new LinkedListNode(10);
+        ListNode linkedListNode = new ListNode(5);
+        ListNode linkedListNode1 = new ListNode(10);
         linkedListNode.setNext(linkedListNode1);
-        linkedListNode1.setNext(new LinkedListNode(15));
+        linkedListNode1.setNext(new ListNode(15));
 
         printLinkedList(linkedListNode);
         int length = getLengthOfLL(linkedListNode);
         System.out.println(length);
-        insertElementAtEnd(linkedListNode, new LinkedListNode(20));
+        insertElementAtEnd(linkedListNode, new ListNode(20));
         printLinkedList(linkedListNode);
         System.out.println(getLengthOfLL(linkedListNode));
     }
 
-    private static void insertElementAtEnd(LinkedListNode linkedListNode, LinkedListNode add) {
+    private static void insertElementAtEnd(ListNode linkedListNode, ListNode add) {
         while (linkedListNode.getNext() != null){
             linkedListNode = linkedListNode.getNext();
         }
         linkedListNode.setNext(add);
     }
 
-    private static int getLengthOfLL(LinkedListNode linkedListNode) {
+    private static int getLengthOfLL(ListNode linkedListNode) {
         int length = 0;
         while (linkedListNode != null){
             length++;
@@ -35,36 +35,11 @@ public class LinkedList {
         return length;
     }
 
-    public static void printLinkedList(LinkedListNode linkedListNode) {
+    public static void printLinkedList(ListNode linkedListNode) {
         while (linkedListNode != null){
-            System.out.print(linkedListNode.getData()+"->");
+            System.out.print(linkedListNode.getData() + "̥->");
             linkedListNode = linkedListNode.getNext();
         }
         System.out.println("null");
-    }
-
-    public static class LinkedListNode{
-        int data;
-        LinkedListNode next;
-
-        public LinkedListNode(int data) {
-            this.data = data;
-        }
-
-        public LinkedListNode getNext() {
-            return next;
-        }
-
-        public void setNext(LinkedListNode next) {
-            this.next = next;
-        }
-
-        public int getData() {
-            return data;
-        }
-
-        public void setData(int data) {
-            this.data = data;
-        }
     }
 }
